@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 9615b5930ee128f70a75026c718549367fd6fea6
 date: 2017-01-15T00:09:35+02:00
 author: tabletJaZz <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ no message
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
