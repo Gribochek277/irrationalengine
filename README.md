@@ -1,7 +1,7 @@
-> Sanitized mirror of Forgejo `serhii/irrationalengine`. Source code is not published here.
+> Sanitized mirror of Forgejo `serhii/IrrationalEngine`. Source code is not published here.
 >
 > Commit texts: `commits/`. Need the code? Email: sergeyalpatov1@gmail.com
-> Source: Forgejo `serhii/irrationalengine` | Synced: 2026-10-05T01:38:59Z
+> Source: Forgejo `serhii/IrrationalEngine` | Synced: 2026-10-07T00:56:53Z
 
 ---
 
