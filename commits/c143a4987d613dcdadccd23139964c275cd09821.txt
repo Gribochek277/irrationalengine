@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: c143a4987d613dcdadccd23139964c275cd09821
+date: 2017-02-09T22:50:33+02:00
+author: DESKTOP-AQ0O6U5\kpbil <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Добавил ссыки на гтк 2.12, вращение объекта мышкой
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
