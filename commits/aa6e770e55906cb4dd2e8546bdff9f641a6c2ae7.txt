@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: aa6e770e55906cb4dd2e8546bdff9f641a6c2ae7
 date: 2017-03-09T23:09:07+02:00
 author: DESKTOP-AQ0O6U5\kpbil <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ message:
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
