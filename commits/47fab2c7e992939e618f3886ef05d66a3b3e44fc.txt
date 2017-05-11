@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 47fab2c7e992939e618f3886ef05d66a3b3e44fc
 date: 2017-05-11T17:53:36+03:00
 author: Epox277 <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Butify Program.cs
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
