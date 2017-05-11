@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 9de65d67b4d4d5c0708b71a9ff823fca4e2e199a
+date: 2017-05-11T17:51:15+03:00
+author: Epox277 <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Changed class name to more representative.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
