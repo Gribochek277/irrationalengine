@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: b93e61a209ae1ca65d6638ebe69f010a3bc70a8d
+date: 2017-05-11T17:25:44+03:00
+author: Epox277 <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Fixed camera look. Yay!
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
