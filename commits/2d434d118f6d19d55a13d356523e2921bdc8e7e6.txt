@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 2d434d118f6d19d55a13d356523e2921bdc8e7e6
 date: 2017-05-11T16:40:33+03:00
 author: Epox277 <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Added default mesh, but default texture still neded.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
