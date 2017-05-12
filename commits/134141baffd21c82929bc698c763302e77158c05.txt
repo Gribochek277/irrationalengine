@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 134141baffd21c82929bc698c763302e77158c05
 date: 2017-05-12T14:55:59+03:00
 author: Epox277 <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Decomposition in process
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
