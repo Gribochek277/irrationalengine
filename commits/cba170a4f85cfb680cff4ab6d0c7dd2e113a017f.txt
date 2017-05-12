@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: cba170a4f85cfb680cff4ab6d0c7dd2e113a017f
 date: 2017-05-12T15:45:14+03:00
 author: sergey alpatov <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Merged decomposition into master
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
