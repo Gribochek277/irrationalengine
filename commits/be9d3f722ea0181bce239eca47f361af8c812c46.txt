@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: be9d3f722ea0181bce239eca47f361af8c812c46
 date: 2017-05-12T16:09:02+03:00
 author: Epox277 <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Removed unnecessary lines
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
