@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 2987ae87e0230c6b94dfce7fde248d25900c7809
 date: 2017-05-13T17:15:18+03:00
 author: tabletJaZz <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Refactored way of initalisation objectOnScene, deleted unnessesary entity Wavefr
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
