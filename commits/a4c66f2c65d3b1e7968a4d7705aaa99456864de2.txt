@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: a4c66f2c65d3b1e7968a4d7705aaa99456864de2
 date: 2017-06-08T23:38:56+03:00
 author: sergey alpatov <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Reeorked ShaderProgram class
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
