@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 8121f3d345ea3f80e1232abe949f0a2f3db0e1b7
 date: 2017-06-26T18:48:40+03:00
 author: DESKTOP-AQ0O6U5\kpbil <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Fix opengl.dll. config
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
