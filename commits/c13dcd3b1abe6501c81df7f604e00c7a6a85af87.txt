@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: c13dcd3b1abe6501c81df7f604e00c7a6a85af87
 date: 2017-07-02T01:29:54+03:00
 author: DESKTOP-AQ0O6U5\kpbil <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Working Copy OpengTK render. Not final.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
