@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 2c60ac187dd451dbca214c6a42f67bf2cba2de10
+date: 2017-07-10T20:43:12+03:00
+author: sergey alpatov <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Added custom models maded in blender into resource folder. Changed shader version for compatibility in linux and older videocards.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
