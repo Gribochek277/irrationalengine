@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 535cdaab82c2c8e72f56b7bdbef5638b653bfa66
+date: 2017-07-12T17:44:14+03:00
+author: Sergey Alpatov <sergey.alpatov@hys-enterprise.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Added globalization to model and material parsers
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
