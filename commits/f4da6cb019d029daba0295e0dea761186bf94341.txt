@@ -1,0 +1,14 @@
+repository: serhii/irrationalengine
+commit: f4da6cb019d029daba0295e0dea761186bf94341
+date: 2017-07-18T20:49:24Z
+author: sergey alpatov <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Merged in OpenTK_render (pull request #1)
+OpenTK render
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
