@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 34a7f60d38a3fc34916b8e4f1b23e2ffa0ab630a
 date: 2017-07-31T23:59:43+03:00
 author: negliada dmitry <negliada.dmitry@gmail.com>
@@ -9,5 +9,6 @@ Added GameWindow and Renderer sketches
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
