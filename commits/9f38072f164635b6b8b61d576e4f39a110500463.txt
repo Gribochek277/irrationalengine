@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 9f38072f164635b6b8b61d576e4f39a110500463
 date: 2017-08-01T22:23:22+03:00
 author: negliada dmitry <negliada.dmitry@gmail.com>
@@ -9,5 +9,6 @@ solution fix
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
