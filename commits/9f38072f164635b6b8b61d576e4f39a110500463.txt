@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 9f38072f164635b6b8b61d576e4f39a110500463
+date: 2017-08-01T22:23:22+03:00
+author: negliada dmitry <negliada.dmitry@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+solution fix
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
