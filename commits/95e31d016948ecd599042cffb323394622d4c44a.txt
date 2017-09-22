@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 95e31d016948ecd599042cffb323394622d4c44a
 date: 2017-09-22T22:19:22+03:00
 author: Sergey <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Working OpenTKWindow
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
