@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: c4832cf3ce7b1bd353be345efed3d13447baa1dd
 date: 2017-10-30T00:09:55+02:00
 author: Sergey <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ fixed texture shader
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
