@@ -1,0 +1,16 @@
+repository: serhii/irrationalengine
+commit: 81a9ef26a9a3121ec03e18ab5a4e284ad9da467f
+date: 2017-10-29T13:44:54Z
+author: sergey alpatov <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Merged in dev/refactoring (pull request #2)
+No reason to implement this in differend branch anymore.
+
+Approved-by: sergey alpatov <kpbillia219@gmail.com>
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
