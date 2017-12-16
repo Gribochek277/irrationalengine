@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: b9b8b719c37ff99170a69d73b19e24f4777d8fcc
 date: 2017-12-17T00:41:37+02:00
 author: Sergey <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ twicked lion model
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
