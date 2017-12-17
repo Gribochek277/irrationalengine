@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 16da67c2f6c3497b662e028e7d24943338a37f94
+date: 2017-12-17T04:34:35+02:00
+author: DESKTOP-AQ0O6U5\kpbil <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Added not working normal map support. Shader cannot hold two textures properly.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
