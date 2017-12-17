@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 7d1816b7362670eb5a0fe6003e8579c4dc6ea458
+date: 2017-12-17T15:54:35+02:00
+author: DESKTOP-AQ0O6U5\kpbil <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Fixed two textures shader
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
