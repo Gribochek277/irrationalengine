@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 78f1e1fbb0d8ba5d7c7965c0f3c1c8e9608813ef
 date: 2017-12-28T17:34:53+02:00
 author: Sergey Alpatov <sergey.alpatov@hys-enterprise.com>
@@ -9,5 +9,6 @@ Minor cleanup code
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
