@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: e8510e65c5ffb9f71272fbfa0cada2f531d74055
+date: 2018-01-01T22:23:25+02:00
+author: Sergey <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+refactored material loader to support relative path in models
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
