@@ -1,0 +1,14 @@
+repository: serhii/irrationalengine
+commit: 49f5e51aa6a167e60f46c7b48ab087b2d12fa83a
+date: 2018-01-07T20:39:04+02:00
+author: Sergey <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Revert "Project moved to .net core."
+This reverts commit dd00001cc0dd08078b52bc90e6993971a92acab3.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
