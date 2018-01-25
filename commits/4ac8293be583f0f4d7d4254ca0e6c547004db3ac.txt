@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 4ac8293be583f0f4d7d4254ca0e6c547004db3ac
 date: 2018-01-25T23:49:46+02:00
 author: DESKTOP-AQ0O6U5\kpbil <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Created knight gameobject, started to fixing fs_norm shader.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
