@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: f4efee6621f2267395048dda99906f1a2e0b1ff8
 date: 2018-01-27T20:58:08+02:00
 author: DESKTOP-AQ0O6U5\kpbil <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Added gltf2 package, added gltf2 test models.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
