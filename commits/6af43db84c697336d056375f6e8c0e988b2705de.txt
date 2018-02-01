@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 6af43db84c697336d056375f6e8c0e988b2705de
+date: 2018-02-01T23:59:21+02:00
+author: DESKTOP-AQ0O6U5\kpbil <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Renamed box.obj
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
