@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 3b36b7e6ba58aaddbc6b45e97fc664646df3a4bd
+date: 2018-02-04T23:38:10+02:00
+author: Sergey Alpatov <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Added point light
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
