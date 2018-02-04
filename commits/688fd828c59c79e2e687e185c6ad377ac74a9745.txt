@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 688fd828c59c79e2e687e185c6ad377ac74a9745
+date: 2018-02-04T23:31:38+02:00
+author: sergey alpatov <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Fixed linux build, added Path.Combine to be platform independent.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
