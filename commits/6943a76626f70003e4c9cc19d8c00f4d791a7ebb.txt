@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 6943a76626f70003e4c9cc19d8c00f4d791a7ebb
+date: 2018-04-01T23:03:11+03:00
+author: DESKTOP-AQ0O6U5\kpbil <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Added support diffuse irradiance to shader
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
