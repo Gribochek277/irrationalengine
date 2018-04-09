@@ -1,0 +1,14 @@
+repository: serhii/irrationalengine
+commit: c86d01ffa6376e2c23823ca0e43f4f958695b68c
+date: 2018-04-09T14:45:52Z
+author: sergey alpatov <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Merged in hdr_cubemap_implementation (pull request #4)
+Hdr cubemap implementation
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
