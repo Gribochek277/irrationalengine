@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: d5ccd0d8cf5ac907859f7baef6391f64850d5b30
+date: 2018-05-06T15:55:33+03:00
+author: Sergey <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Changed image magic package to any cpu
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
