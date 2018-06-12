@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 96d9be4fb7e799a1885c5d9cdc6daf48ab293961
 date: 2018-06-12T20:47:30+03:00
 author: Sergey Alpatov <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Updated versions of opengl in shaders
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
