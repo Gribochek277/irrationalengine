@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: c47c381f4ce0bf9fd6d7703dffebeec597091e4a
+date: 2018-07-23T23:21:03+03:00
+author: Sergey Alpatov <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Added prefilter map generation
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
