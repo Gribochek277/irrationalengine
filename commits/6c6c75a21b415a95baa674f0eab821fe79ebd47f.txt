@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 6c6c75a21b415a95baa674f0eab821fe79ebd47f
+date: 2018-08-13T01:44:04+03:00
+author: Sergey Alpatov <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Changed some dependecies to use interfaces, moved some classes
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
