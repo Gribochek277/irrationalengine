@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 2d42bd68fd3fdd6aa5b19e6c3a91fc3ff7d09ce9
+date: 2018-12-10T00:06:05+02:00
+author: Sergey Alpatov <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Added selection of the scene object
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
