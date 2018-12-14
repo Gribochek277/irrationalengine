@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 8cf729ca6fe4fd9bbe889380d61404b4139a02db
+date: 2018-12-14T21:09:16+02:00
+author: Sergey Alpatov <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Changed the way how objects in editor initialized
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
