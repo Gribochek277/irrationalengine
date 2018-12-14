@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: bd46d51587462d0627fc30879a38ea2add3aa30d
+date: 2018-12-14T16:49:41+02:00
+author: Sergey Alpatov <sergey.alpatov@hys-enterprise.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Added translate X and Y, pretified rotation of X and Y
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
