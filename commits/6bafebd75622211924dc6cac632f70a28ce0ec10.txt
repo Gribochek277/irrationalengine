@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 6bafebd75622211924dc6cac632f70a28ce0ec10
+date: 2018-12-14T22:52:02+02:00
+author: Sergey Alpatov <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Added custom controll for tests
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
