@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 43169b4ab8b5040cf40cdd981a734df86a4b40fa
+date: 2018-12-14T16:54:11+02:00
+author: Sergey Alpatov <sergey.alpatov@hys-enterprise.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Merge branch 'net_core_implementation' of https://bitbucket.org/Epox277/irrationalengine into net_core_implementation
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
