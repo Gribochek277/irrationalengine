@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 28e3a9a057bbd96ae82ac169810865d0d8470ca9
 date: 2019-04-02T14:56:14+03:00
 author: Sergey Alpatov <sergey.alpatov@hys-enterprise.com>
@@ -9,5 +9,6 @@ Added helper for saving texture to bmp.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
