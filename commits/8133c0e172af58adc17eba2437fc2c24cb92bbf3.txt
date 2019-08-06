@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 8133c0e172af58adc17eba2437fc2c24cb92bbf3
 date: 2019-08-07T01:28:43+03:00
 author: Sergey <jazz@jazz-TM1703>
@@ -9,5 +9,6 @@ Update .gitignore
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
