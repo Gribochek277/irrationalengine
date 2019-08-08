@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 0e8dfe7fe54cc09c97dc942f0070c0df616b6f0d
 date: 2019-08-08T04:29:45+03:00
 author: Sergey <jazz@jazz-TM1703>
@@ -9,5 +9,6 @@ Upgraded avalonia package version IrrationalEngineEditor.Avalonia.csproj
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
