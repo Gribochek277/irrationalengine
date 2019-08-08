@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: cf1a5ec22aa303cbf1b2dbd48f379b6b4b88ce15
+date: 2019-08-08T04:28:22+03:00
+author: Sergey <jazz@jazz-TM1703>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Removed launch.json
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
