@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: ad47174a14aa6ad2d0041f5b99acaadeb6e1aede
 date: 2019-08-11T22:12:46+03:00
 author: Sergey <jazz@jazz-TM1703>
@@ -9,5 +9,6 @@ Added default DI for .net core, also made minor changes.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
