@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: d4346d5fdb0bb467b940c6b0244f04654161bbf7
 date: 2019-09-03T00:24:29+03:00
 author: Sergey Alpatov <sergey.alpatov@hys-enterprise.com>
@@ -9,5 +9,6 @@ Changed the way how program is starting
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
