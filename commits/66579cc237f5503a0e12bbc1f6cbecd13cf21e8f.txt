@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 66579cc237f5503a0e12bbc1f6cbecd13cf21e8f
 date: 2019-09-25T02:34:20+03:00
 author: Sergey Alpatov <sergey.alpatov@hys-enterprise.com>
@@ -9,5 +9,6 @@ Fixed  some rendering artifacts, moved to another opentk fork.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
