@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 4a31af31459f891f4e116b069835930a4306d4c3
 date: 2019-10-08T01:39:47+03:00
 author: Sergey Alpatov <sergey.alpatov@hys-enterprise.com>
@@ -137,5 +137,6 @@ Merge branch 'net_core_implementation'
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
