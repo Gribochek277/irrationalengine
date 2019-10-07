@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 76fc00afe7bd6e58c396f13148d8b7206f599c61
 date: 2019-10-08T01:32:59+03:00
 author: Sergey Alpatov <sergey.alpatov@hys-enterprise.com>
@@ -9,5 +9,6 @@ Fixed gltf loaders, prepared them for work with animations.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
