@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 29cfeb0982fc23cbc5ecca49384a9406f9b14106
 date: 2019-12-23T03:26:33+02:00
 author: Serhii <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Removed old trash after merge, added wpf project.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
