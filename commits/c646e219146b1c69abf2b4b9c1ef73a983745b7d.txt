@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: c646e219146b1c69abf2b4b9c1ef73a983745b7d
 date: 2020-01-04T14:41:48+02:00
 author: Serhii <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Added wpf editor project.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
