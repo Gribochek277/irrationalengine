@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: c646e219146b1c69abf2b4b9c1ef73a983745b7d
+date: 2020-01-04T14:41:48+02:00
+author: Serhii <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Added wpf editor project.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
