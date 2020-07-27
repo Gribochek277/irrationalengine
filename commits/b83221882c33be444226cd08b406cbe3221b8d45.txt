@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: b83221882c33be444226cd08b406cbe3221b8d45
 date: 2020-07-28T00:16:38+03:00
 author: Sergey Alpatov <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ removed redundant step
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
