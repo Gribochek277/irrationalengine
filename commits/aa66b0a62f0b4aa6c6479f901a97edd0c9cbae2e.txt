@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: aa66b0a62f0b4aa6c6479f901a97edd0c9cbae2e
+date: 2020-07-27T23:21:58+03:00
+author: Sergey Alpatov <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Added variable to CI config. added several comments.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
