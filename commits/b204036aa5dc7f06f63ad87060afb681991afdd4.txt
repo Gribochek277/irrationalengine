@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: b204036aa5dc7f06f63ad87060afb681991afdd4
 date: 2020-07-28T03:16:37+03:00
 author: Sergey Alpatov <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ removed attempts to use cachings
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
