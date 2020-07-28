@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 2a23e133a8fc957323dfb05fa8d8f833cb8d1f35
 date: 2020-07-27T19:44:53-05:00
 author: Administrator <admin@example.com>
@@ -12,5 +12,6 @@ See merge request root/irrationalengine!8
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
