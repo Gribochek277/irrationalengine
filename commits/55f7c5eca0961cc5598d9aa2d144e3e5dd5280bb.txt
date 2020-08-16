@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 55f7c5eca0961cc5598d9aa2d144e3e5dd5280bb
 date: 2020-08-16T07:01:07+03:00
 author: Sergey Alpatov <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Fixed docker image
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
