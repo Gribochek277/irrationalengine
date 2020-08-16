@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 506021dbd4c8c2da0d8a24091d77d5877b66e32b
+date: 2020-08-16T06:52:59+03:00
+author: Sergey Alpatov <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Updated to .Net5.0 and OpenTK 4.9 preview.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
