@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: c382d8479823621ce4e71ee733ba5944442c8448
 date: 2020-08-17T15:34:43-05:00
 author: Administrator <admin@example.com>
@@ -11,5 +11,6 @@ Merge branch 'develop' into 'feature/IEEN-3-element-buffer-objects'
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
