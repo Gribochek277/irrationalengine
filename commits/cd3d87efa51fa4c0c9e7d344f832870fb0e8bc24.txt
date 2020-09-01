@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: cd3d87efa51fa4c0c9e7d344f832870fb0e8bc24
 date: 2020-09-01T07:04:34+03:00
 author: Sergey Alpatov <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Added basic support of textures.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
