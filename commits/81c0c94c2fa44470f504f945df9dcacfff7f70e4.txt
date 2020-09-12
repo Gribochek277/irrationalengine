@@ -1,0 +1,16 @@
+repository: serhii/irrationalengine
+commit: 81c0c94c2fa44470f504f945df9dcacfff7f70e4
+date: 2020-09-12T09:19:18-05:00
+author: Administrator <admin@example.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Merge branch 'feature/add-basic-texture-support' into 'develop'
+Added movement and camera
+
+See merge request MayDay/irrationalengine!13
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
