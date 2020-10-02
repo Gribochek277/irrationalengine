@@ -1,0 +1,16 @@
+repository: serhii/irrationalengine
+commit: 26b34e1446dce52f7a4190340b839afddcf7fcb2
+date: 2020-10-02T17:47:19-05:00
+author: Administrator <admin@example.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Merge branch 'feature/package_Update' into 'develop'
+Updated packages
+
+See merge request MayDay/irrationalengine!15
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
