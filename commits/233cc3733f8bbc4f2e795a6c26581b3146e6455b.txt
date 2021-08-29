@@ -1,0 +1,16 @@
+repository: serhii/irrationalengine
+commit: 233cc3733f8bbc4f2e795a6c26581b3146e6455b
+date: 2021-08-29T16:56:34+03:00
+author: Sergey Alpatov <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Merge branch 'develop' of https://github.com/Gribochek277/IeCore into develop
+# Conflicts:
+#	IrrationalEngine/IeCore/DefaultImplementations/Primitives/Cube.cs
+#	IrrationalEngine/IeCore/DefaultImplementations/Scene/DefaultScene.cs
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
