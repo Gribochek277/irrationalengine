@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: aed60bd4aabc94132b6f1f6ee58fff3241d9fd24
 date: 2023-04-02T00:18:43+03:00
 author: serhii <serhii@serhii-TM1703>
@@ -9,5 +9,6 @@ Removed dependency on System.Drawings from application code.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
