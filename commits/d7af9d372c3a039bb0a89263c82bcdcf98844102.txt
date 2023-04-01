@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: d7af9d372c3a039bb0a89263c82bcdcf98844102
 date: 2023-04-02T01:37:51+03:00
 author: serhii <serhii@serhii-TM1703>
@@ -9,5 +9,6 @@ Removed deprecated project
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
