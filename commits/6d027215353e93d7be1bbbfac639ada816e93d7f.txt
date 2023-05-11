@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 6d027215353e93d7be1bbbfac639ada816e93d7f
 date: 2023-05-12T01:24:57+03:00
 author: Gribochek277 <36171312+Gribochek277@users.noreply.github.com>
@@ -10,5 +10,6 @@ Updated some files
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
