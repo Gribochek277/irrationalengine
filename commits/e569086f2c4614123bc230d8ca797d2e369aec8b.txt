@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: e569086f2c4614123bc230d8ca797d2e369aec8b
 date: 2023-05-11T23:30:35+01:00
 author: Serhii <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Moved windows dependant functionality to a separate project.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
