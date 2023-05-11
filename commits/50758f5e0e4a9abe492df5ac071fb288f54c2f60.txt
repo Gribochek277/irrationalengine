@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 50758f5e0e4a9abe492df5ac071fb288f54c2f60
 date: 2023-05-12T00:56:03+01:00
 author: Serhii <kpbillia219@gmail.com>
@@ -9,5 +9,6 @@ Removed throw exception
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
