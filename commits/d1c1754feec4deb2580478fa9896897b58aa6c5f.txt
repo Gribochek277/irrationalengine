@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: d1c1754feec4deb2580478fa9896897b58aa6c5f
+date: 2023-05-12T01:43:35+03:00
+author: Gribochek277 <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Wrapped in using IDisposable object
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
