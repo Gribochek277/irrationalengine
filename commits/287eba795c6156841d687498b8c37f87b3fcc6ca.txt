@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 287eba795c6156841d687498b8c37f87b3fcc6ca
+date: 2023-07-29T02:08:40+03:00
+author: Gribochek277 <kpbillia219@gmail.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Changed renderer to silk.net to be able to run on linux
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
