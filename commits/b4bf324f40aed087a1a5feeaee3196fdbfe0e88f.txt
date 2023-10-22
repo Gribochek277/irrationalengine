@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: b4bf324f40aed087a1a5feeaee3196fdbfe0e88f
 date: 2023-10-22T21:55:46+03:00
 author: Gribochek277 <36171312+Gribochek277@users.noreply.github.com>
@@ -9,5 +9,6 @@ Updated renderer
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
