@@ -1,0 +1,28 @@
+repository: serhii/irrationalengine
+commit: a2e83b78131b520391cdedef7cf86e4fbf68a7ac
+date: 2026-06-15T21:59:20+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: Unity-style Inspector with reflection-driven component property panel
+- Add HideInInspectorAttribute in IeCoreInterfaces
+- Apply [HideInInspector] to ISceneObjectComponent.Name
+- Add ImGuiPropertyDrawer: reflection-based per-component property rendering
+  - bool -> Checkbox, int -> DragInt, float/double -> DragFloat
+  - string -> InputText, enum -> Combo
+  - Vector2/3/4 -> DragFloat2/3/4
+  - get-only props -> disabled widget, unsupported types -> LabelText
+  - Inline red error label on setter exception
+  - PascalCase property name prettification
+  - IsHideInInspector walks interface map to inherit attribute from interfaces
+- Replace bullet-text component list with ImGuiPropertyDrawer.DrawComponent
+- Transform fields (Position/Rotation/Scale) now use DragFloat3
+- Inspector window scrollable (no NoScrollbar flag)
+- Panels horizontally resizable via SetNextWindowSizeConstraints (200-420px)
+- Fix: remove SetNextItemWidth(-1) from DrawVec3Field so labels are visible
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
