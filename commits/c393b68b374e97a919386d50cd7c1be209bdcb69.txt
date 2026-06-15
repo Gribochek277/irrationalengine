@@ -1,0 +1,36 @@
+repository: serhii/irrationalengine
+commit: c393b68b374e97a919386d50cd7c1be209bdcb69
+date: 2026-06-15T10:45:47+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix: new objects no longer share knight animation (4 root causes)
+Bug A (Renderer): extract InitialiseSceneObject(); lazy GPU init in OnRender()
+when VertexArrayObjectId <= 0 — prevents stale VAO fallthrough to knight mesh.
+Also handles texture.Id <= 0 for assets registered after OnLoad.
+
+Bug B1 (MaterialComponent): animated shader uses distinct cache keys
+'DefaultVertexShaderAnimated' / 'DefaultFragmentShaderAnimated' — prevents
+the asset-manager cache from returning the animated shader when loading
+the static (non-animated) shader source.
+
+Bug B2 (ShaderProgram): guard CreateProgram() with 'if (ShaderProgramId == -1)'
+and skip duplicate shaders via _storedShaders.Exists(). Prevents GL program
+leak and avoids overwriting ShaderProgramId on shared instances.
+
+Bug B3 (IrrationalEngine): AddTransient<IShaderProgram> — DefaultScene and
+PrimitvesFactory each get their own ShaderProgram instance so the animated
+and static programs never share a single object.
+
+Bug C (DefaultScene): remove 4x duplicate knight reference. Now exactly one
+MainCamera ('MainCamera') and one knight ('Knight') are added. Fixes animation
+running 4x too fast and scale compounding to 0.0625.
+
+Bug D (SceneObject): Position is now a backed field with ApplyPosition() setter
+— writes to Mesh.Transform.Position so editor inspector changes are visible.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
