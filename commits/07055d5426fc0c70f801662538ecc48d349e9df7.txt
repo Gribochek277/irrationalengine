@@ -1,0 +1,26 @@
+repository: serhii/irrationalengine
+commit: 07055d5426fc0c70f801662538ecc48d349e9df7
+date: 2026-06-15T04:43:52+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: add IeCoreEditor with ImGui Hierarchy/Inspector panels and OrbitCamera
+- Add ITransformable interface + patch ISceneObject (Position in interface)
+- New IeCoreEditor project (depends on IeCoreInterfaces + ImGui.NET + Silk.NET)
+- IEditorActions: selection, transform mutations, add/remove primitives, undo/redo
+- TransformCommand: undo stack entry for position/rotation/scale changes
+- ISceneMutable: runtime add/remove scene objects (implemented by DefaultScene)
+- OrbitCamera: orbit/pan/zoom editor camera replacing FPS Camera
+- ImGuiController: full Silk.NET OpenGL 3.3 backend for ImGui.NET
+- EditorUI: Hierarchy panel + Inspector panel (Enter/blur commit, realtime update)
+- EditorServiceExtensions: services.AddEditor() DI registration
+- Wire IEditorUI into SilkNetOpenGlWindow (renders after 3D pass, before SwapBuffers)
+- WindowFactory: inject optional IEditorUI, window size 1280x720
+- Remove IeCoreOpenTKOpengl from IeCore.csproj and IWindowFactory
+- Disable DefaultScene auto-rotation (editor owns transforms)
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
