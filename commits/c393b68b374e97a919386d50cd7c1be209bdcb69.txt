@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: c393b68b374e97a919386d50cd7c1be209bdcb69
 date: 2026-06-15T10:45:47+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -32,5 +32,6 @@ Bug D (SceneObject): Position is now a backed field with ApplyPosition() setter
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
