@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 32a71f17960ebf8e06ac977f18e677f56734744e
 date: 2026-08-05T01:17:32+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -17,5 +17,6 @@ major refactor: decouple editor UI from rendering backend
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
