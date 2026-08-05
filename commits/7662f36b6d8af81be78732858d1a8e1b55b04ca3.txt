@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 7662f36b6d8af81be78732858d1a8e1b55b04ca3
 date: 2026-08-05T05:38:05+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -12,5 +12,6 @@ Addresses PR review comments on command pool leak
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
