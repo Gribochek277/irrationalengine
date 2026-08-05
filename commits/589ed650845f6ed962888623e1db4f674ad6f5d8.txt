@@ -1,0 +1,17 @@
+repository: serhii/irrationalengine
+commit: 589ed650845f6ed962888623e1db4f674ad6f5d8
+date: 2026-08-05T05:21:26+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix: XML docs + nullable fixes for warning-free build
+- Add XML docs to all public members (CS1591) across Vulkan and Silk.NET OpenGL backends
+- Fix nullable warnings (CS8600/CS8601/CS8602/CS8618) in OpenGL renderer, shader, window
+- Add VulkanCommandUtil.cs, move VulkanDevice files into VulkanDevice/
+- Rewrite AGENTS.md; drop tracked tooling state (.vscode/, .pi/, .opencode/)
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
