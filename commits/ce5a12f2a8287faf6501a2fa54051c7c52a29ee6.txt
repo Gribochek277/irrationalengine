@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: ce5a12f2a8287faf6501a2fa54051c7c52a29ee6
+date: 2026-08-08T21:31:59+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix: clean .gitignore — remove HTML junk, add .opencode/ and .pi/ ignores
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
