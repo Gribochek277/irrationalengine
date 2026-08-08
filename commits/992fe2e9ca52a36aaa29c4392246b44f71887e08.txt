@@ -1,0 +1,20 @@
+repository: serhii/irrationalengine
+commit: 992fe2e9ca52a36aaa29c4392246b44f71887e08
+date: 2026-08-08T23:14:27+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: unknown
+
+message:
+chore: final verification of ImGui backend decomposition
+- dotnet format applied (no changes needed)
+- dotnet build Debug/Release: 0 warnings, 0 errors
+- dotnet test: 13/13 passed
+- No project cycles between ImGui projects and SilkNet backends
+- Smoke run: not possible (no display in this environment)
+
+Refs #9
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
