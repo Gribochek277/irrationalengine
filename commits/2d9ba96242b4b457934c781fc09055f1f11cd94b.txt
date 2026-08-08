@@ -1,0 +1,40 @@
+repository: serhii/irrationalengine
+commit: 2d9ba96242b4b457934c781fc09055f1f11cd94b
+date: 2026-08-08T23:22:58+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: extract ImGui backend into dedicated projects (Vulkan + OpenGL)
+Decouple ImGui rendering from concrete Vulkan/GL backend implementations by
+creating four new projects that host interfaces and ImGui-specific logic.
+
+New projects:
+- IeCoreVulkanInterfaces: IVulkanDeviceContext, IVulkanResourceUploader,
+  IVulkanTexturePipeline, IVulkanShaderCompiler, data types
+- IeCoreOpenGlInterfaces: IOpenGlContext contract
+- IeCoreImGuiVulkan: VulkanImGuiRenderer, pipeline, shaders, GLSL compiler
+- IeCoreImGuiOpenGl: OpenGLImGuiRenderer, shader program, GLStateGuard, shaders
+
+Wiring:
+- SilkNetVulkanWindow injects shared IVulkanResourceUploader + pipeline
+- SilkNetOpenGlWindow implements IOpenGlContext, constructs OpenGLImGuiRenderer
+
+Style:
+- No block-scoped using (try/finally disposal per AGENTS.md)
+- Explicit type names in new expressions
+- sealed on Disposable classes (CA1063)
+- TreatWarningsAsErrors in Debug for all new projects
+
+Verification:
+- dotnet build Debug: 0 warnings, 0 errors
+- dotnet build Release: 0 compilation errors
+- dotnet test: 13/13 passed
+- No cycles between ImGui projects and SilkNet backends
+
+Closes #3, Closes #4, Closes #5, Closes #6, Closes #7, Closes #8, Closes #9
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
