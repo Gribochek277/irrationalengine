@@ -1,0 +1,22 @@
+repository: serhii/irrationalengine
+commit: 8cc5ae086f72389ff1ca0ab57e077f7995d6aa67
+date: 2026-08-08T23:10:07+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: unknown
+
+message:
+feat: create IeCoreImGuiOpenGl — shaders, program, GLStateGuard, renderer
+- New project IeCoreImGuiOpenGl referencing IeCoreEditor + IeCoreOpenGlInterfaces
+- OpenGLImGuiShaders: verbatim ImGui GLSL sources
+- OpenGLImGuiProgram: shader program with uniform/attribute locations
+- GLStateGuard: captures/restores GL state via try/finally (no block-scoped using)
+- OpenGLImGuiRenderer: facade taking IOpenGlContext, delegates to program
+- SilkNetOpenGlWindow implements IOpenGlContext, constructs new renderer
+- Old OpenGLImGuiRenderer.cs deleted from IeCoreSilkNetOpenGl
+
+Refs #8
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
