@@ -1,0 +1,18 @@
+repository: serhii/irrationalengine
+commit: a32e6685304abe5a33944bdf0926a94fcc50bbdb
+date: 2026-08-08T23:34:31+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix: add layout(location) to ImGui shader I/O for SPIR-V compliance
+glslang requires explicit location decorations on all user-defined
+inputs/outputs when compiling to SPIR-V. Vertex outputs and fragment
+inputs were missing them, causing parse failure.
+
+Refs #6
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
