@@ -1,0 +1,15 @@
+repository: serhii/irrationalengine
+commit: e223e0954c5f0d42600c8b21c752a0d29788d3fd
+date: 2026-08-08T21:47:10+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+chore: enable TreatWarningsAsErrors in Release for IeCoreVulkanInterfaces
+Ensures zero-warning builds across both Debug and Release configurations
+for the new interfaces project.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
