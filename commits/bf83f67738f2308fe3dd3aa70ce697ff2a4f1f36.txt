@@ -1,0 +1,18 @@
+repository: serhii/irrationalengine
+commit: bf83f67738f2308fe3dd3aa70ce697ff2a4f1f36
+date: 2026-08-08T05:12:37+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: add IVulkanResourceUploader interface (DIP)
+VulkanResourceUploader implements IVulkanResourceUploader.
+VulkanRenderer and VulkanImGuiRenderer depend on the interface.
+VulkanTexturePipeline accepts IVulkanResourceUploader in constructor.
+
+Addresses PR #2 comment: 'Why no interface for this?'
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
