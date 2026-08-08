@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: e223e0954c5f0d42600c8b21c752a0d29788d3fd
 date: 2026-08-08T21:47:10+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -11,5 +11,6 @@ for the new interfaces project.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
