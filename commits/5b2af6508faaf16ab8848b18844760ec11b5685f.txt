@@ -1,0 +1,15 @@
+repository: serhii/irrationalengine
+commit: 5b2af6508faaf16ab8848b18844760ec11b5685f
+date: 2026-08-09T00:37:50+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix: convert else-if chain to switch in ImGuiPropertyDrawer (#17 comment)
+The else-if chain for type dispatching is cleaner as a switch statement
+with pattern matching. Each case handles one property type consistently.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
