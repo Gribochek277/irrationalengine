@@ -1,0 +1,24 @@
+repository: serhii/irrationalengine
+commit: 795bc558b523309b602cfefd26ab328ed450c551
+date: 2026-08-08T22:55:04+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: unknown
+
+message:
+feat: move VulkanImGuiRenderer to IeCoreImGuiVulkan, strip debug code
+- New VulkanImGuiRenderer in IeCoreImGuiVulkan implementing IImGuiRenderer
+  with constructor taking IVulkanDeviceContext, RenderPass, uploader,
+  texture pipeline, ILoggerFactory
+- CreateFontTexture uses IVulkanTexturePipeline.UploadRawImage, all debug
+  code removed (alpha analysis, /tmp dump, vertex/index dump, per-command log)
+- RenderDrawData uses VulkanImGuiPipeline accessors, all debug logging stripped
+- SilkNetVulkanWindow constructs shared uploader + texture pipeline, passes
+  to new renderer; IeCoreSilkNetVulkan references IeCoreImGuiVulkan
+- Old VulkanImGuiRenderer.cs deleted from IeCoreSilkNetVulkan
+
+Refs #7
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
