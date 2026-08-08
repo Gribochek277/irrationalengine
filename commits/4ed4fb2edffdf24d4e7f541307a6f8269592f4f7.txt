@@ -1,0 +1,18 @@
+repository: serhii/irrationalengine
+commit: 4ed4fb2edffdf24d4e7f541307a6f8269592f4f7
+date: 2026-08-08T22:37:33+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: unknown
+
+message:
+feat: scaffold IeCoreOpenGlInterfaces with IOpenGlContext contract
+Create new project hosting OpenGL-backend-specific contracts.
+IOpenGlContext provides the thin seam between consumers and the
+concrete OpenGL window so renderers stay testable and decoupled.
+
+Refs #5
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
