@@ -1,0 +1,35 @@
+repository: serhii/irrationalengine
+commit: 2734c7978e302b80ad3d9f6117da15feee4233ea
+date: 2026-08-08T04:50:10+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+refactor: SOLID split of VulkanResourceUploader — SRP, OCP, ISP, DIP (4 phases)
+Phase 1 — SRP: Split VulkanResourceUploader (44 methods) into two classes:
+  VulkanResourceUploader  — buffers, staging, single-time commands
+  VulkanTexturePipeline   — images, textures, views, samplers
+
+Phase 2 — OCP: Un-harden creation methods with optional parameters:
+  CreateImage(imageType, arrayLayers), UploadTexture(format, generateMips),
+  CreateSampler(magFilter, minFilter, anisotropy, compare, ...)
+  All defaults match previous behavior — zero breakage.
+
+Phase 3 — Disposal: Route all buffer cleanup through DisposeBuffer()
+  instead of raw vk.DestroyBuffer scattered in OnUnload.
+
+Phase 4 — DIP: Introduce IVulkanDeviceContext interface.
+  VulkanDevice implements it explicitly. VulkanResourceUploader,
+  VulkanTexturePipeline, VulkanCommandUtil accept the abstraction.
+
+Also:
+  AGENTS.md — added SOLID Principles + Code Style Preferences sections
+  VulkanBuffer/Image/Texture — added to repo (were untracked)
+  VulkanRenderer, VulkanImGuiRenderer — wired both classes
+
+Fixes: SRP god-object, OCP hardcoded formats, DIP concrete dependency
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
