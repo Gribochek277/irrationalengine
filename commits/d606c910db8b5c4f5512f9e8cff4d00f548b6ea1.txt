@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: d606c910db8b5c4f5512f9e8cff4d00f548b6ea1
 date: 2026-08-08T16:30:06+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -13,5 +13,6 @@ docs for IeCoreInterfaces.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
