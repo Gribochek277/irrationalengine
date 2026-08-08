@@ -1,0 +1,23 @@
+repository: serhii/irrationalengine
+commit: 6ca35e33c91f2378cec5c09b9a9d4028da5db2a4
+date: 2026-08-08T22:49:00+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: unknown
+
+message:
+feat: create IeCoreImGuiVulkan — shaders, compiler, pipeline
+- New project IeCoreImGuiVulkan referencing only contracts (NOT IeCoreSilkNetVulkan)
+- VulkanImGuiShaders: verbatim ImGui GLSL vertex + fragment sources
+- VulkanGlslCompiler: trimmed IVulkanShaderCompiler without GLSL transforms,
+  uses try/finally for disposal (AGENTS.md compliance)
+- VulkanImGuiPipeline: full ImGui pipeline factory with shader compilation,
+  descriptor set layout/pool, pipeline layout, graphics pipeline, VBO/EBO/UBO
+  buffers; UpdateDescriptorSet, IDisposable
+- VBO/EBO use HostVisible/HostCoherent without TransferDstBit
+
+Refs #6
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
