@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 18bd3ba0a19973472cf8803f3337004f8e66aa38
 date: 2026-08-09T21:33:07+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -23,5 +23,6 @@ fix: address PR #28 review findings (depth restore, pipeline cache, docs, dispos
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
