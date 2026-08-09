@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: cc0acf0a19b9b191a6d1b089211693d1dc1012cb
 date: 2026-08-10T02:09:52+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -26,5 +26,6 @@ degenerate ray-plane intersection for edge-on rings.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
