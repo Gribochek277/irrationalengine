@@ -1,0 +1,28 @@
+repository: serhii/irrationalengine
+commit: 4c24a640cfa19d1e85b307962914e65cc4a58d60
+date: 2026-08-09T20:06:58+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: gizmo rendering tracer — visual rig for translate/rotate/scale (both backends)
+Implements #20: editor gizmos rendered through the existing scene-object
+pipeline in both OpenGL and Vulkan backends.
+
+- IeCoreInterfaces: IViewportState (renderer-published view snapshot),
+  GizmoMode, IGizmoSystem, GizmoMarkerComponent (shared 'Gizmo' key),
+  IDefaultShaders.GetUnlitShader
+- IeCore: DefaultViewportState, GizmoSystem (memoized rigs, screen-constant
+  scale, add/remove on selection change), GizmoGeometry (arrow/ring/bar
+  unit models)
+- IeCoreEditor: GizmoScreenMath (pure sizing math), toolbar with W/E/R mode
+  buttons reflecting CurrentMode, W/E/R hotkeys, gizmo-excluding hierarchy
+- Renderers: publish IViewportState per frame and on resize; depth test off
+  for gizmo objects (GL state toggle / Vulkan pipeline DepthTestEnable)
+- Tests: hierarchy gizmo filter + screen-math scaling (20 passing)
+- docs/adr: gizmo-scene-object-integration.md
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
