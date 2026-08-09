@@ -1,0 +1,27 @@
+repository: serhii/irrationalengine
+commit: 18bd3ba0a19973472cf8803f3337004f8e66aa38
+date: 2026-08-09T21:33:07+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix: address PR #28 review findings (depth restore, pipeline cache, docs, disposal)
+- [P1] OpenGL: depth test restore now runs in a finally block — a draw
+  exception can no longer leave depth testing disabled for later frames.
+  Per-object draw extracted into DrawSceneObject().
+- [P1] Vulkan: DepthTestEnable mutable property removed. Pipelines are now
+  cached per depth-test state (BuildPipeline(renderPass, depthTestEnable) /
+  GetPipeline(depthTestEnable)), so a shared shader program is never mutated
+  per frame and a gizmo + regular object can safely share one shader.
+  RebuildPipelines() refreshes all cached pipelines on swapchain recreate
+  (replaces old pipeline without leaking).
+- [P2] IViewportState: single-threaded contract documented on the interface.
+- [P2] GizmoRigFactory: IDisposable unloads memoized rigs (axis.OnUnload,
+  idempotent shared-program dispose); GizmoSystem.Dispose removes the visible
+  rig from the scene first.
+- Tests: +1 disposal test (26 passing).
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
