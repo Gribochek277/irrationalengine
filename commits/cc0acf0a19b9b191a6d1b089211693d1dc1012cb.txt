@@ -1,0 +1,30 @@
+repository: serhii/irrationalengine
+commit: cc0acf0a19b9b191a6d1b089211693d1dc1012cb
+date: 2026-08-10T02:09:52+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: rotate gizmo drag — ring hit-test, euler round-trip, edge-on fallback (#22)
+Implements rotate manipulation (issue #22):
+
+- GizmoManipulator: stateless math for ring hit-testing (screen-space
+  distance to the projected ring polyline), ray-plane arc-angle delta,
+  absolute-position drag (angle always measured from the initial drag
+  point), world-space euler round-trip via quaternions matching the
+  engine's Scale·RotX·RotY·RotZ·Translation convention, and an
+  edge-on ring fallback ported from three.js TransformControls.
+- GizmoSystem: full BeginDrag/Drag/EndDrag lifecycle for rotate; the
+  gizmo is anchored at the model's bounding-box center and rotation
+  keeps the pivot fixed (orbit position correction), so the model
+  rotates around the gizmo instead of orbiting it.
+- EditorUI: left-mouse input wired to the drag lifecycle.
+- 60 tests pass; solution builds with 0 warnings.
+
+Fixes: X-ring hit-test accuracy, quaternion→euler axis pollution,
+degenerate ray-plane intersection for edge-on rings.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
