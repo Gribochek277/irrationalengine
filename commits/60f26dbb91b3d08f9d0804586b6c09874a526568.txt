@@ -1,0 +1,28 @@
+repository: serhii/irrationalengine
+commit: 60f26dbb91b3d08f9d0804586b6c09874a526568
+date: 2026-08-09T20:27:37+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+refactor: move gizmo system to IeCoreEditor behind an IGizmoRigFactory seam
+Addresses PR #28 review feedback on gizmo placement.
+
+- IeCoreEditor/Gizmos: GizmoMode, IGizmoSystem, GizmoSystem (lifecycle:
+  selection follow, screen-constant scale, scene registration), GizmoScreenMath
+  — editor contracts and logic now live in the editor project, matching
+  IEditorActions/IEditorUI convention
+- IeCoreInterfaces: keep only GizmoMarkerComponent + IViewportState (both
+  consumed by renderers); remove GizmoMode/IGizmoSystem
+- IeCore: GizmoRigFactory implements new IGizmoRigFactory (IeCoreEditor) —
+  the only place constructing SceneObject/ModelComponent/MaterialComponent;
+  owns GizmoGeometry; GizmoRig dropped (factory returns axis list)
+- DI: IGizmoRigFactory registered in IeCore, IGizmoSystem registered in
+  AddEditor(); IeCoreEditor gains Microsoft.Extensions.Logging.Abstractions
+- Tests: +5 GizmoSystemTests (selection follow, mode switch, no re-add);
+  25 total passing
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
