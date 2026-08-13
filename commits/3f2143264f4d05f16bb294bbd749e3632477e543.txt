@@ -1,0 +1,20 @@
+repository: serhii/irrationalengine
+commit: 3f2143264f4d05f16bb294bbd749e3632477e543
+date: 2026-08-13T17:53:56+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix: address PR #29 review findings
+- hit-test/grab uses the rendered rig anchor (bbox center), not object position
+- gizmo drag release observed even when cursor leaves viewport/panels
+- cache per-mesh local bounds and union per-mesh transforms for the anchor
+- guard rotate initial-drag-point ray/plane denominator
+- scale drag now multiplicative (displacement since start / ring radius)
+- spell out normalized device coordinates in NDC docs
+- tests: 65 pass, build clean (0 warnings)
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
