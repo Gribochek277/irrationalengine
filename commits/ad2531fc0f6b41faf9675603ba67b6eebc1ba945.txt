@@ -1,0 +1,18 @@
+repository: serhii/irrationalengine
+commit: ad2531fc0f6b41faf9675603ba67b6eebc1ba945
+date: 2026-08-24T06:24:15+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+refactor: add IVulkanRenderer, IVulkanOverlayRenderer, IVulkanWindowHost to IeCoreVulkanInterfaces
+Narrow Vulkan seams for the overlay inversion:
+- IVulkanRenderer: host-facing renderer surface (ImGui renderer creation)
+- IVulkanOverlayRenderer: the per-frame overlay contract (command buffer + extent)
+- IVulkanWindowHost: window surface + framebuffer size, replacing the
+  SilkNetVulkanWindow.Current static reads
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
