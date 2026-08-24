@@ -1,0 +1,17 @@
+repository: serhii/irrationalengine
+commit: 136f73eaa23747938d699e77b7b4b53ae9431eca
+date: 2026-08-24T23:17:09+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+chore: remove IeWin (FBX now served by cross-platform importer)
+IeWin was a Windows-only (net10.0-windows) project that held the FBX importer.
+FBX is now handled by IeCoreAssetImporters.FbxSceneImporter on StirlingLabs.Assimp.Net,
+so IeWin is no longer needed. Removed the directory, dropped it from the solution,
+and removed the related Platform note from AGENTS.md.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
