@@ -1,0 +1,20 @@
+repository: serhii/irrationalengine
+commit: 2f52ec16909dd004c0876b653a0d6c6c8a161342
+date: 2026-08-24T23:49:15+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix: use the animated shader for the glTF duck to share the scene's shader program
+Both material components received the same injected IShaderProgram. The knight
+prepares it with the animated shaders and flips _stagesReady, so when the duck
+loaded its static shaders afterwards PrepareShaders early-returned and
+_shaderModules (2) fell out of sync with _storedShaders (4), throwing
+IndexOutOfRange in BuildPipeline. Reusing the animated shader pair keeps the
+counts in sync (duplicate shader names are de-duplicated) and renders the
+static duck correctly via the total-weight path.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
