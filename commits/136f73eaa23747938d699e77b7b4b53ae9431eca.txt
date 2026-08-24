@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 136f73eaa23747938d699e77b7b4b53ae9431eca
 date: 2026-08-24T23:17:09+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -13,5 +13,6 @@ and removed the related Platform note from AGENTS.md.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
