@@ -1,0 +1,17 @@
+repository: serhii/irrationalengine
+commit: 2a63f7cd2958c44a555d500c384e6bf48e479690
+date: 2026-08-24T23:41:53+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: add glTF 2.0 demo model next to the FBX knight in the default scene
+Registers Duck.glb (Khronos sample) through the cross-platform GltfSceneImporter
+and places the object beside the existing knight (FBX) demo object, exercising the
+importer end-to-end in the running engine. The model uses the same MaterialComponent
+pattern as the knight (checkerboard diffuse) and sits at x=3 next to it.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
