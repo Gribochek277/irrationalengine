@@ -1,0 +1,14 @@
+repository: serhii/irrationalengine
+commit: 029fc51fe4a24adc0b2dd3311ffbb26fa439535b
+date: 2026-08-24T20:53:40+03:00
+author: serhii <serhii@localhost>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Merge pull request 'refactor: invert the editor overlay seam — IVulkanRenderer / IVulkanOverlayRenderer / IVulkanWindowHost, remove SilkNetVulkanWindow.Current' (#30) from feature/vulkan-overlay-seam into main
+Reviewed-on: http://100.110.77.11/serhii/IrrationalEngine/pulls/30
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
