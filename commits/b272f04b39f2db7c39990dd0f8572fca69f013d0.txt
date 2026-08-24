@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: b272f04b39f2db7c39990dd0f8572fca69f013d0
+date: 2026-08-24T06:47:46+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+docs: add one-type-per-file coding standard to AGENTS.md
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
