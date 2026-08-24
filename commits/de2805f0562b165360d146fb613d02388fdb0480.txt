@@ -1,0 +1,28 @@
+repository: serhii/irrationalengine
+commit: de2805f0562b165360d146fb613d02388fdb0480
+date: 2026-08-24T20:50:42+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+refactor: mirror the renderer seam on the OpenGL side — IOpenGlRenderer + renderer-owned editor renderer
+Addresses the PR review comment: the named renderer interface was
+Vulkan-only, and the GL window still constructed the editor's ImGui
+renderer itself.
+
+- IeCoreOpenGlInterfaces.Rendering.IOpenGlRenderer : IRenderer with
+  CreateImGuiRenderer() — mirrors IVulkanRenderer.
+- GL Renderer implements it: SetContext captures IOpenGlContext alongside
+  the engine window; OnLoad reads the GL entry points from the captured
+  context instead of the SilkNetOpenGlWindow.GetWindowContext static.
+- SilkNetOpenGlWindow takes IOpenGlRenderer and hands
+  CreateImGuiRenderer() to the editor UI; the direct OpenGLImGuiRenderer
+  construction is gone.
+- WindowFactory.CreateSilkNetWindow performs the symmetric
+  IRenderer -> IOpenGlRenderer downcast.
+- CONTEXT.md: architecture line for IOpenGlRenderer.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
