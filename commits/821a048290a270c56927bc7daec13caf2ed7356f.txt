@@ -1,0 +1,17 @@
+repository: serhii/irrationalengine
+commit: 821a048290a270c56927bc7daec13caf2ed7356f
+date: 2026-08-24T23:45:26+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix: retrieve glTF scene via GltfScene.RootModel in default scene
+GltfSceneImporter returns a GltfScene (not a Model) registered under the
+file name without extension ("Duck"). Retrieving it as Model returned null and
+caused a NullReferenceException on .Meshes. Use Retrieve<GltfScene>("Duck")
+and take its RootModel instead.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
