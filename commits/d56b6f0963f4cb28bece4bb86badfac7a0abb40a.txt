@@ -1,0 +1,26 @@
+repository: serhii/irrationalengine
+commit: d56b6f0963f4cb28bece4bb86badfac7a0abb40a
+date: 2026-08-24T06:39:19+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+refactor: renderer owns the ImGui renderer; overlay invoked via seam; remove SilkNetVulkanWindow.Current
+- VulkanRenderer implements IVulkanRenderer: CreateImGuiRenderer() builds
+  the ImGui renderer on the renderer's own uploader/texture pipeline and
+  registers it as the per-frame overlay; the frame loop invokes
+  IVulkanOverlayRenderer inside the render pass instead of firing the
+  concrete-typed OnRenderPassActive event.
+- VulkanImGuiRenderer implements IVulkanOverlayRenderer (SetCommandBuffer +
+  editor render); the shared uploader is borrowed, not disposed here.
+- SilkNetVulkanWindow implements IVulkanWindowHost (surface + framebuffer
+  size); the static Current singleton and the window-side cast/construction
+  block are gone; the window hands IImGuiRenderer to the editor UI.
+- VulkanSwapchainManager takes the window host instead of reading the static.
+- WindowFactory performs the single interface downcast (IRenderer ->
+  IVulkanRenderer) in the wiring layer.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
