@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: de2805f0562b165360d146fb613d02388fdb0480
 date: 2026-08-24T20:50:42+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -24,5 +24,6 @@ renderer itself.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
