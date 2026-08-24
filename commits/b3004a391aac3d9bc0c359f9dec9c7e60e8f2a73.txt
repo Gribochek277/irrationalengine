@@ -1,0 +1,38 @@
+repository: serhii/irrationalengine
+commit: b3004a391aac3d9bc0c359f9dec9c7e60e8f2a73
+date: 2026-08-24T23:13:54+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: add glTF 2.0 importer and consolidate asset importers
+New cross-platform IeCoreAssetImporters project (net10.0) that holds every
+asset importer, mirroring the renderer-backend layout:
+
+- glTF 2.0 importer (GltfSceneImporter : IModelImporter) supports both .gltf
+  and .glb containers, the full core spec plus the light Khronos extensions
+  KHR_materials_unlit, KHR_materials_emissive_strength and KHR_texture_transform
+  (pluggable via IGltfExtensionHandler), real texture decoding through
+  ImageSharp + StbImageSharp, plus skins and skeletal animation.
+- FBX migrated off the Windows-only AssimpNet onto StirlingLabs.Assimp.Net and
+  rewritten without AutoMapper (manual mapping, like the glTF mapper).
+- Model/Texture importers moved here; TextureImporter now decodes pixels for real.
+
+Entities extended: PbrMaterial, GltfScene/GltfCamera/GltfNode, GltfTextureInfo,
+AlphaMode, and richer Vertex/Transform/AnimationKey.
+
+DI wired through AddAssetImporters(); AssetManager dispatches by file extension.
+Solution renamed IrrationaEngineCore.sln -> IrrationalEngineCore.sln.
+
+Tests: 27 passing (offline .gltf/.glb fixtures + 15 Khronos glTF-Sample-Assets
+covering meshes, texture decode, skins, animation, unlit/emissive/texture-transform,
+vertex colors and sparse accessors).
+
+Note: IeWin (net10.0-windows) is not part of the Linux solution and its build is
+therefore unverified here; its FBX code now references the new cross-platform
+FbxSceneImporter instead of the removed AssimpNet/AutoMapper pipeline.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
