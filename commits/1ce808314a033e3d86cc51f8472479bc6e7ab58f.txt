@@ -1,0 +1,40 @@
+repository: serhii/irrationalengine
+commit: 1ce808314a033e3d86cc51f8472479bc6e7ab58f
+date: 2026-08-25T05:00:56+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: unknown
+
+message:
+feat: per-instance scene object transforms and programmatic shader switching
+- Add a per-instance Transform to ISceneObject; Position/Rotation/Scale
+  become thin accessors onto it. Both renderers now compose
+  object.Transform.ModelMatrix on top of the imported mesh base matrix,
+  so objects sharing one Model asset move independently and glTF baked
+  node poses respect object TRS. Objects without a ModelComponent
+  (markers, triggers) are legal.
+- Make IMaterialComponent.ShaderProgram settable and add ShaderPresets
+  (Diffuse/Animated/Unlit) that build ready-to-render programs from the
+  backend's IDefaultShaders sources. MaterialComponent.OnLoad now loads
+  via IDefaultShaders; the duplicated IeCore DefaultDiffuseShader*
+  constants are removed.
+- Vulkan: detect runtime shader swaps per frame and rebuild the
+  object's GPU state (mesh, material, descriptor set, bone buffer).
+  Drop the regex GLSL transformation pass from VulkanShaderCompiler --
+  Vulkan sources are now native #version 450 with push constants and
+  descriptor sets; UnlitFragmentSrc declares layout(location) explicitly.
+- OpenGL: re-initialise scene objects on shader swap and drive the bone
+  attribute block from the current shader's attributes, so an animated
+  object can switch to a static/unlit shader without GL_INVALID_OPERATION.
+- Remove the deprecated IeCoreOpenTKOpengl project from the solution and
+  disk.
+- Docs: ADR per-instance-transform-and-shader-switching, CONTEXT.md
+  glossary, AGENTS.md project structure.
+
+Verified: Debug (warnings-as-errors) and Release builds clean, 107/107
+tests pass, manual Vulkan and OpenGL runs confirm immediate shader
+switch rendering and independent transforms for shared-model cubes.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
