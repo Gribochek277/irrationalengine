@@ -1,0 +1,28 @@
+repository: serhii/irrationalengine
+commit: 3ca320b6feba58765a4081ca4de45891902b5354
+date: 2026-08-27T02:24:08+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: unknown
+
+message:
+feat: camera IsMain via ICameraRegistry and material render strategy for glTF textures
+Camera (Unity-style IsMain toggle):
+- ICameraRegistry + DefaultCameraRegistry own the main-camera role: at most one main, at least one main while cameras exist, no camera -> scene not rendered.
+- ICamera.IsMain on both Camera and OrbitCamera, delegating to the registry (no own state).
+- DefaultScene registers/unregisters cameras on add/remove and sets main on load; dead IScene.MainCamera setter removed.
+- Renderers resolve the main camera from the registry each frame and skip the scene draw when it is null.
+- EditorUI orbit-cam swap preserves the main role.
+
+Duck texture (material render strategy):
+- IMaterialRenderStrategy + DiffuseMaterialStrategy/PbrMaterialStrategy/MaterialStrategyResolver in IeCoreEntities.Materials; renderers consume materials through the resolver via DI.
+- DefaultScene now uses the PbrMaterial the glTF importer built (named after its glTF name, not 'Duck') with its embedded BaseColorTexture; checkerboard is only a literal fallback when no base-color texture exists.
+
+Tests & ADRs:
+- New IeCore.Tests project: registry invariants, strategy resolver, IsMain delegation, DefaultScene camera register/unregister.
+- FakeCameraRegistry + EditorUI swap-preserves-main test; renderer contract tests updated for the new ctor params.
+- ADRs: docs/adr/camera-registry-is-main.md, docs/adr/material-render-strategy.md.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
