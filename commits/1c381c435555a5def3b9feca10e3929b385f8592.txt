@@ -1,0 +1,27 @@
+repository: serhii/irrationalengine
+commit: 1c381c435555a5def3b9feca10e3929b385f8592
+date: 2026-08-27T04:45:05+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: unknown
+
+message:
+refactor: address PR #34 review — camera component names + material-owned diffuse mapping
+- OrbitCamera component name is now "OrbitCamera" (was "Camera"), so the
+  runtime and editor cameras can coexist in one scene; both accept an
+  optional name parameter.
+- DefaultCameraRegistry (and the editor fake) reject registering a camera
+  whose name is already taken (InvalidOperationException).
+- EditorUI/DefaultScene look up cameras by the ICamera type instead of a
+  hardcoded "Camera" component key.
+- DiffuseMaterialStrategy/PbrMaterialStrategy/MaterialStrategyResolver and
+  the renderer-side strategy plumbing are removed: Material.DiffuseTexture
+  and Material.DiffuseColor are virtual, and PbrMaterial overrides them to
+  resolve the engine's single diffuse slot from its glTF base color inputs.
+  Renderers go back to plain property reads.
+- ADRs updated to the post-review decisions; tests adjusted + new cases
+  for duplicate-name rejection and PBR diffuse resolution (131 passing).
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
