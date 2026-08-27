@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 1c381c435555a5def3b9feca10e3929b385f8592
 date: 2026-08-27T04:45:05+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -23,5 +23,6 @@ refactor: address PR #34 review — camera component names + material-owned diff
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
