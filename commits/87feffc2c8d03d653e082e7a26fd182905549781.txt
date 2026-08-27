@@ -1,0 +1,21 @@
+repository: serhii/irrationalengine
+commit: 87feffc2c8d03d653e082e7a26fd182905549781
+date: 2026-08-27T08:04:17+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: unknown
+
+message:
+refactor: report camera registration refusals via CameraRegistrationResult
+Register now returns a CameraRegistrationResult (status + human-readable
+reason) instead of throwing, so duplicate-name refusals can be surfaced
+by callers: DefaultScene logs the refusal at warning level and EditorUI
+prints it when the orbit camera swap is refused. SetMain applies the main
+role only when the camera is actually tracked by the registry, so a
+name-conflict refusal cannot dangle the main role on an untracked camera
+while a benign re-register of an already-tracked camera still works.
+Tests updated to the result-based API (133 passing).
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
