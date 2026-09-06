@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 9a2c6c34ad51d6cf430e541477faeb4604712560
 date: 2026-09-06T11:24:02+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -9,5 +9,6 @@ refactor: express asset filter branches as a switch expression (review comment)
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
