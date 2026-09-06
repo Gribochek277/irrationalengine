@@ -1,0 +1,38 @@
+repository: serhii/irrationalengine
+commit: e56cb959910b81260677fa8647a5cabf1dc2ac09
+date: 2026-09-06T10:56:44+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: Unity-style asset browser, texture hot-swap and scene-object transform fixes
+Editor (IeCoreEditor):
+- Asset browser dock: Unity-style Project panel with folder tree, breadcrumbs,
+  file list, t:Type search, context menu (Add to Scene, Show in Explorer) and
+  double-click instantiation of models/glTF scenes.
+- Inspector texture object fields: preview swatch, picker popup, clear button
+  and drag-and-drop from the browser; DnD payload "ie-asset-path".
+- FilterAssets extracted to an internal static and covered by unit tests.
+
+Rendering (Vulkan + OpenGL):
+- Renderers now compose the scene object's editor transform
+  (Transform.Compose: Scale * Rot * Translation) on top of the mesh's baked
+  model matrix, so gizmo/inspector edits actually move what is drawn.
+- Texture hot-swap: reassigning a material texture in the inspector rebuilds
+  the GPU texture and descriptors on both backends.
+- Gizmo anchor now tracks the object's world position; pivot uses the vertex
+  centroid (visual mass center) with an 18 px hit tolerance.
+
+Asset pipeline:
+- AssetManager.RegisterFile returns the imported asset and replaces name
+  collisions so file-based lookups stay consistent; RetrieveFile<T> is
+  implemented (was NotImplementedException).
+- Asset.File is settable so importers rebind stale serialized paths;
+  JSON model import binds the actual file and throws on missing models.
+
+Tests: 147 passing (filter logic, Transform.Compose, gizmo anchor, fakes).
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
