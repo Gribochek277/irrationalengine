@@ -1,0 +1,22 @@
+repository: serhii/irrationalengine
+commit: 6b438daabba54753a88b508bf5e372bffe06015f
+date: 2026-09-06T11:30:59+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix: log empty-cache fallbacks instead of failing silently (review)
+- GizmoSystem: when the mesh stats cache yields nothing usable, log a
+  Warning once per object instead of silently falling back to the object
+  position (fallback recurs every frame, so diagnostics are deduplicated).
+- AssetBrowserService: warn when a scan produces zero assets (missing roots
+  or no supported files) so an empty Project dock is diagnosable.
+- VulkanRenderer: warn once per object when a model has no uploadable
+  meshes and rendering of it is skipped.
+- AGENTS.md: document the 'never leave caches silently incomplete' rule
+  under Code Style Preferences.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
