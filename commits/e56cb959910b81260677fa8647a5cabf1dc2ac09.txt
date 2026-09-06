@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: e56cb959910b81260677fa8647a5cabf1dc2ac09
 date: 2026-09-06T10:56:44+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -34,5 +34,6 @@ Tests: 147 passing (filter logic, Transform.Compose, gizmo anchor, fakes).
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
