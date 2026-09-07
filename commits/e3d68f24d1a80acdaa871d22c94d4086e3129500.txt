@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: e3d68f24d1a80acdaa871d22c94d4086e3129500
+date: 2026-09-07T04:20:45+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: dockable, collapsible editor panels with fit-to-content and layout persistence
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
