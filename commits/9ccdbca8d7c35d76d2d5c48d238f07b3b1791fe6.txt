@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 9ccdbca8d7c35d76d2d5c48d238f07b3b1791fe6
 date: 2026-09-07T04:37:40+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -9,5 +9,6 @@ fix: Project panel scrollbar flicker — hide window scrollbars, keep viewport f
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
