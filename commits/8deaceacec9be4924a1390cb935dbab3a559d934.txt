@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 8deaceacec9be4924a1390cb935dbab3a559d934
 date: 2026-09-08T02:10:23+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -9,5 +9,6 @@ feat: add 3D gizmo handle picking
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
