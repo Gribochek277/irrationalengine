@@ -1,0 +1,32 @@
+repository: serhii/irrationalengine
+commit: a1bd8853248dbf31cd187395d2a179afb0ba26a1
+date: 2026-09-08T09:40:59+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: gizmo rotate drag — fixed drag plane, incremental angle, degeneracy fallbacks (#56)
+The rotate drag re-evaluated the face-on/edge-on threshold every frame,
+returned a zero delta on degenerate ray/plane intersections (freezing at
+screen edges), and measured the angle from the grab point, which a camera
+move mid-drag could warp.
+
+- SelectRotatePlane: pick the ring plane or the camera-facing plane once
+  at BeginDrag — no mid-drag plane switches, no angle jump at the boundary.
+- ComputeRotatePoint: intersect the cursor ray with the fixed plane; fall
+  back to the other plane (then the pivot) instead of freezing on a zero.
+- ComputeRotateDelta(previous, current, pivot, axis): signed angle between
+  successive drag points — incremental, so only the world points matter.
+- ComputeRotateDeltaCameraOnEdge: three.js tangential model for edge-on
+  rings; trackball angle when the tangent degenerates (view along axis).
+- GizmoSystem stores the plane and the previous point, updating it each frame.
+- Sign test matrix 3 axes × 6 octants, camera-move incremental test, plane
+  classification and fallback tests.
+
+Scratch card 03 marked done; the ring hit-zone closing gap was already
+fixed by #72's 3D ray-pick (TryRing closes the polyline).
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
