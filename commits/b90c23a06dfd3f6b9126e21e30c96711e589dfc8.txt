@@ -1,0 +1,29 @@
+repository: serhii/irrationalengine
+commit: b90c23a06dfd3f6b9126e21e30c96711e589dfc8
+date: 2026-09-08T17:11:04+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: gizmo scale drag — around model anchor, no jitter (#57)
+Scale the selected object about its model anchor (center) instead of the
+object origin, so the center stays under the cursor during a non-uniform
+scale of an offset-mesh model. Displacement along the axis is measured with
+the camera-plane projection (same model as translate) rather than the
+closest-line projection, which degenerates at the screen edges and when the
+axis is viewed end-on.
+
+- GizmoManipulator.ComputeScalePosition: orbit-compensates the object
+  position so the world anchor is invariant under a scale change
+  (P' = P0 + f(S0) - f(S')).
+- GizmoSystem: cache the local anchor offset and start rotation at BeginDrag;
+  scale drag now issues SetPosition alongside SetScale.
+- Tests: ComputeScalePosition unit tests (anchor fixed, no-op on equal
+  scale) + GizmoSystem.Drag_ScaleKeepsModelCenterFixed.
+
+Closes #57. Debug/Release build green (both backends), 109/109 tests pass.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
