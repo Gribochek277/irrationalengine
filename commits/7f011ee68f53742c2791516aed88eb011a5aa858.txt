@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 7f011ee68f53742c2791516aed88eb011a5aa858
+date: 2026-09-08T13:13:15+03:00
+author: serhii <serhii@localhost>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Merge branch 'main' into feature/asset-browser-sub-assets
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
