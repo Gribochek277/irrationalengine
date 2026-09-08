@@ -1,0 +1,14 @@
+repository: serhii/irrationalengine
+commit: 22b6cbcef9968665fc88ddf62354e7c5b46b4c75
+date: 2026-09-08T03:08:47+03:00
+author: serhii <serhii@localhost>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Merge pull request 'feat: 3D ray-pick gizmo handles' (#72) from feature/gizmo-ray-pick-handles into main
+Reviewed-on: http://100.110.77.11/serhii/IrrationalEngine/pulls/72
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
