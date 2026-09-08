@@ -1,0 +1,14 @@
+repository: serhii/irrationalengine
+commit: bfb3b05e6558baaff26716f4ee101649194b45c0
+date: 2026-09-08T13:16:42+03:00
+author: serhii <serhii@localhost>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Merge pull request 'feat: expose imported sub-assets in the project browser' (#77) from feature/asset-browser-sub-assets into main
+Reviewed-on: http://100.110.77.11/serhii/IrrationalEngine/pulls/77
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
