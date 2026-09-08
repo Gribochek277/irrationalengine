@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: a1bd8853248dbf31cd187395d2a179afb0ba26a1
 date: 2026-09-08T09:40:59+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -28,5 +28,6 @@ fixed by #72's 3D ray-pick (TryRing closes the polyline).
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
