@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: c1e39e3fbe470fa4a17ec211afa4616eff362498
 date: 2026-09-08T09:44:06+03:00
 author: serhii <serhii@localhost>
@@ -9,5 +9,6 @@ Merge pull request 'feat: gizmo rotate drag — fixed drag plane, incremental an
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
