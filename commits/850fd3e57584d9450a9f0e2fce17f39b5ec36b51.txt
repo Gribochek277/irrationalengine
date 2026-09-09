@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 850fd3e57584d9450a9f0e2fce17f39b5ec36b51
+date: 2026-09-09T10:41:19+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+docs: record #64 manual acceptance and Gitea closure
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
