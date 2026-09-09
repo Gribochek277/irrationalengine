@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: ab197707e8e68566c276fc7c6702ee1591f3a437
 date: 2026-09-09T17:15:28+03:00
 author: serhii <serhii@localhost>
@@ -9,5 +9,6 @@ Merge pull request 'feat: render all meshes of a model with per-mesh transform a
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
