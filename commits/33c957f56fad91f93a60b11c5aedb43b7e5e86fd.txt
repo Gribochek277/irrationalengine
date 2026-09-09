@@ -1,0 +1,40 @@
+repository: serhii/irrationalengine
+commit: 33c957f56fad91f93a60b11c5aedb43b7e5e86fd
+date: 2026-09-09T10:40:38+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: gizmo UX — hover highlight, cursor, orbit lock, Q/W/E/R, Ctrl snap (#64)
+Unity-style gizmo UX layer on top of the existing drag pipeline.
+
+- Hover highlight: GizmoSystem.UpdateHover + HoverAxis/ActiveAxis/IsDragging
+  on IGizmoDebugView; the overlay brightens the hovered handle toward white and
+  dims the other handles (alpha 0.35); during a drag the active axis is bright
+  and the rest dimmed.
+- Cursor: the editor sets ImGui.SetMouseCursor while hovering a handle
+  (translate -> ResizeAll, scale -> ResizeNWSE, rotate -> Hand).
+- Orbit lock: middle/right camera orbit/pan is suppressed while a gizmo drag
+  is in progress (_gizmoHasGrab).
+- Q/W/E/R: new GizmoMode.Hand (Q) — navigation-only, renders a hand marker,
+  no editable handles; toolbar button added. W/E/R switch tools as before.
+- Ctrl snap: new GizmoSnap (translate 0.1, rotate 15°, scale 0.1) wired into
+  Drag; SnapEnabled driven by ImGui.GetIO().KeyCtrl. Snap applies to a local
+  copy of the accumulated rotation so sub-increment deltas accumulate across
+  frames while orbit compensation stays consistent.
+
+Input bridge fixes discovered during GUI acceptance:
+- ImGuiInputHandler.MapKey did not forward Q/W/E/R (only A/C/V/X/Y/Z), so hotkeys
+  never reached the editor; added the mapping.
+- Ctrl was forwarded as ImGuiKey.ModCtrl but the editor checked Left/RightCtrl;
+  now reads io.KeyCtrl.
+
+Tests: GizmoSnapTests (pure math), GizmoSystemTests (hover, Hand, snap x3 incl.
+sub-increment rotate accumulation), ImGuiInputHandlerTests (MapKey Q/W/E/R, Ctrl).
+
+Closes #64. Debug/Release build green (both backends), 120/120 tests pass.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
