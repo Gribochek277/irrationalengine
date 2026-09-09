@@ -1,0 +1,30 @@
+repository: serhii/irrationalengine
+commit: bade31bbd02f32f62bee0959a7fdc203f6b5338b
+date: 2026-09-09T13:35:19+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: render all meshes of a model with per-mesh transform and material (#37)
+Renderers drew only mesh[0]'s transform and the first material, so multi-mesh
+FBX/glTF assets rendered mispositioned and with the wrong material. The data
+model already carried per-mesh transforms (glTF node world matrices) and
+per-mesh material slots — only the renderers ignored them.
+
+- ModelComponent: re-base combined indices by cumulative vertex count and
+  per-mesh bone IDs by cumulative bone count; expose GetMeshIndexRanges()
+  for per-mesh draw calls (IModelComponent.GetMeshIndexRanges).
+- OpenGL: DrawSceneObject issues one DrawElements per mesh — mesh baked
+  transform x editor transform, per-slot material/color/texture (hot-swap
+  tracked per slot), one-time logs for skipped non-triangle meshes.
+- Vulkan: GPU materials per (material component, slot); descriptor sets per
+  (object, slot) (frame UBO + bone UBO + slot texture sampler), freed on
+  texture hot-swap and swapchain recreation so the pool does not leak.
+- Tests: ModelComponentTests — index re-basing, ranges, bone re-basing.
+
+closes #37
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
