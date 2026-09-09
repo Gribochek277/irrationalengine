@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 33c957f56fad91f93a60b11c5aedb43b7e5e86fd
 date: 2026-09-09T10:40:38+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -36,5 +36,6 @@ Closes #64. Debug/Release build green (both backends), 120/120 tests pass.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
