@@ -1,0 +1,14 @@
+repository: serhii/irrationalengine
+commit: e4db38b616451117b0449bf7e7151ec94cb9bc2e
+date: 2026-09-09T10:43:16+03:00
+author: serhii <serhii@localhost>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Merge pull request 'feat: gizmo UX — hover highlight, cursor, orbit lock, Q/W/E/R, Ctrl snap (#64)' (#79) from feature/gizmo-ux-hover-snap into main
+Reviewed-on: http://100.110.77.11/serhii/IrrationalEngine/pulls/79
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
