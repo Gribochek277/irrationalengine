@@ -1,0 +1,33 @@
+repository: serhii/irrationalengine
+commit: ff7a44c5d1e4e059ee44d09c43be0f4d22ab7afa
+date: 2026-09-09T17:54:46+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: render contract — Collect → Cull → Sort → Draw stages (#48)
+Renderers walked the scene themselves and duplicated the geometry/material
+decisions per backend. Introduce a backend-agnostic render pipeline both
+backends consume as their draw input, so they draw exactly the same list.
+
+- New project IeCoreRenderPipeline (no GPU types): DrawCall carries the
+  scene object, model/material components, mesh, resolved material slot,
+  combined index range and composed model matrix. Stages: Collector
+  (scene walk → one call per (object, mesh)), Culler (pass-through now;
+  frustum culling comes in #70), Sorter (stable by material slot then
+  object name), RenderPipeline facade (collect → cull → sort).
+- OpenGL: OnRender drains GetVisibleDrawCalls and draws one call per mesh;
+  animation dedup per object per frame.
+- Vulkan: same draw-call input; mesh/material/descriptor-set caches keyed
+  by what the calls carry; animation dedup unchanged.
+- DI: collector/culler/sorter/pipeline registered in IrrationalEngine.
+- Tests: IeCoreRenderPipeline.Tests (collect/sort/composition, fake
+  culler, 20 tests); renderer contract suites gain a render-pipeline
+  ctor-guard test each. Full suite 202 passed, 0 warnings.
+
+closes #48
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
