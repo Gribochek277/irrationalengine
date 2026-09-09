@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: ab197707e8e68566c276fc7c6702ee1591f3a437
+date: 2026-09-09T17:15:28+03:00
+author: serhii <serhii@localhost>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Merge pull request 'feat: render all meshes of a model with per-mesh transform and material (#37)' (#80) from feature/multi-mesh-rendering into main
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
