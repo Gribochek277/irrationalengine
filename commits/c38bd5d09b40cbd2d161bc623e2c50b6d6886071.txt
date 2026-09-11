@@ -1,0 +1,27 @@
+repository: serhii/irrationalengine
+commit: c38bd5d09b40cbd2d161bc623e2c50b6d6886071
+date: 2026-09-11T20:02:28+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: shader variants by material feature flags (#55)
+Shader selection is now driven by material feature flags (diffuse texture,
+skinning, alpha mode) through a pure, tested ShaderVariantResolver; the same
+material resolves the same variant in GL and VK. A memoized variant provider
+per backend compiles each variant at most once per session.
+
+- IeCoreEntities.Shaders: ShaderFeatureFlags + ShaderVariant (LightCount modeled)
+- IeCoreInterfaces.Shaders: IShaderVariantProvider; IDefaultShaders variant-driven
+- IeCoreRenderPipeline: ShaderVariantResolver + memoizing ShaderVariantProviderBase
+- GL/VK: default shaders rewritten per variant; VK pipelines keyed (depth, blend),
+  88 B push block with alphaCutoff; descriptor sets keyed (object, slot, variant)
+- glTF PbrMaterial alpha mode/cutoff survive import (ModelInstanceFactory)
+- Drop IMaterialComponent.ShaderProgram; OpenTK project out of the solution
+- Tests: resolver matrix, provider memoization/dispose, PBR alpha propagation,
+  renderer ctor null-guards
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
