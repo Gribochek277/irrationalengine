@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 6d9ce6249e36148306caab3d990d3b9dbb694502
 date: 2026-09-11T20:22:27+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -9,5 +9,6 @@ fix: preserve glTF PBR material in default scene (#55)
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
