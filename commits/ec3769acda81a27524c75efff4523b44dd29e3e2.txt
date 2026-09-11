@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: ec3769acda81a27524c75efff4523b44dd29e3e2
+date: 2026-09-11T16:52:31+03:00
+author: serhii <serhii@localhost>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Merge pull request 'feat: render contract — Collect → Cull → Sort → Draw stages (#48)' (#81) from feature/render-contract-pipeline into main
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
