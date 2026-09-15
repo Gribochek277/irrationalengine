@@ -1,0 +1,51 @@
+repository: serhii/irrationalengine
+commit: 539650fb2e16464cc8a9ec614a5cc066311008ad
+date: 2026-09-16T02:17:09+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+refactor: share variant stage roles and render state across backends (#55)
+Follow-up to code review of PR #82: the variant plumbing worked, but the
+variant->role/state decisions were duplicated per backend and had already
+diverged. Move each decision into one pure resolver in IeCoreRenderPipeline
+and let the backends only translate it.
+
+Render state (was: Vulkan wrote depth on alpha-blend while OpenGL did not):
+- Add ShaderRenderState + ShaderRenderStateResolver (depth test, depth write,
+  blend) derived purely from ShaderVariant.
+- OpenGL applies it via ApplyRenderState, Vulkan fills its pipeline from it;
+  the Vulkan pipeline cache is keyed by variant, not by (depthTest, alphaBlend).
+
+Material accessor (was: resolver read BaseColorTexture, backends bound
+DiffuseTexture):
+- Material.GetPrimaryColorTexture() is the single color-texture accessor;
+  PbrMaterial falls back to BaseColorTexture. Resolver, hot-swap and both
+  binders read it, so a textured variant always has a bindable texture.
+- Move AlphaMode/AlphaCutoff from PbrMaterial to Material; the shared resolver
+  no longer type-tests for PbrMaterial. glTF base color is mapped onto the
+  engine slots once by ModelInstanceFactory (import adapter).
+
+Stage roles and layout (was: 4-way fragment selection, stage name and push
+constant layout duplicated):
+- Add VertexShaderRole/FragmentShaderRole + ShaderStageRoleResolver;
+  IDefaultShaders takes a role, backends map roles to their own GLSL.
+- Move the variant stage name into ShaderVariantProviderBase.
+- Add VulkanPushConstants as the single source for the push constant block:
+  GLSL declaration (layout(offset = ...)), pipeline range, size and
+  vkCmdPushConstants all derive from it (was 88u for an 84-byte block).
+- Add OpenGlShaderNames for the names the renderer looks up.
+
+Docs: refresh CONTEXT.md glossary/architecture and add
+docs/adr/shader-variants-shared-policy.md. Back-to-front transparency sorting
+stays in #69; ShaderRenderState is its extension point.
+
+Verification: Debug and Release builds clean (TreatWarningsAsErrors);
+280 tests pass (new: render-state invariants, stage-role matrix, GL shader-name
+contract, Glslang compilation of every Vulkan stage role); dotnet format
+reports no violations in touched files.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
