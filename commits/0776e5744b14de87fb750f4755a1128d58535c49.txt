@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 0776e5744b14de87fb750f4755a1128d58535c49
 date: 2026-09-19T21:26:33+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -29,5 +29,6 @@ point lights through a std140 light block.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
