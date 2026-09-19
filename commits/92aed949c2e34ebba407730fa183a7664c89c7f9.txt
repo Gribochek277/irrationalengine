@@ -1,0 +1,16 @@
+repository: serhii/irrationalengine
+commit: 92aed949c2e34ebba407730fa183a7664c89c7f9
+date: 2026-09-19T22:14:54+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+docs: add pending feature specs to the issue tracker
+Adds the roadmap issue files that were still untracked: audio,
+character-collision, combat, content-pipeline, input-cameras and
+tools-polish, plus the missing renderer-core and gizmo-parity specs.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
