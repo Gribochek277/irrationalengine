@@ -1,0 +1,33 @@
+repository: serhii/irrationalengine
+commit: 0776e5744b14de87fb750f4755a1128d58535c49
+date: 2026-09-19T21:26:33+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: Blinn-Phong lighting — directional + point lights (#63)
+Forward lighting shared by both backends: 1 directional + up to 8
+point lights through a std140 light block.
+
+- lighting domain: Light/DirectionalLight/PointLight entities,
+  ILightFactory, LightComponent scene object
+- material model: MaterialPropertyType/Value + MaterialModel replace
+  PbrMaterial; editor material-schema registry (diffuse, blinn-phong)
+- backend-agnostic SceneLightCollector + LightBufferPacker (std140)
+  with UBO per-draw upload, no CPU per-draw stack
+- shared embedded GLSL (LightBlockMembers/LightingCore) compiled by
+  both backends; aNormal vertex attribute; LightBlock UBO (GL binding
+  point 1) / descriptor set binding 3 + POINT_LIGHT_COUNT
+  specialization constant (VK)
+- editor: AddLight action + light inspector; DefaultScene gets a
+  directional + 3 point lights
+- fix: Vulkan — skip frame on AcquireNextImage timeout instead of
+  recreating the swapchain (path blocked inside vkDeviceWaitIdle)
+- tests: LightComponent, LightBufferPacker, SceneLightCollector,
+  material schema registry/visibility, backend contract + GLSL
+  compilation (335 green)
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
