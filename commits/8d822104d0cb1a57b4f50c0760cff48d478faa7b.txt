@@ -1,0 +1,32 @@
+repository: serhii/irrationalengine
+commit: 8d822104d0cb1a57b4f50c0760cff48d478faa7b
+date: 2026-09-19T22:13:46+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix: address review findings on Blinn-Phong lighting (#83)
+Follow-up to the merged PR #83: the reviewed fixes were still uncommitted when
+it merged. Also carries a parallel edit that caches embedded GLSL sources and
+logs resource-load failures once per resource.
+
+Vulkan correctness:
+- write only the current frame-in-flight light buffer; the old loop wrote every
+  buffer each frame, racing the GPU read of an in-flight frame
+- reset the frame fence only when the frame will actually submit; the acquire
+  timeout and out-of-date paths skip without submitting, so the previous
+  ordering left the fence unsignaled and hung the next WaitForFences
+
+Lighting/material:
+- ambient is consumed as a colour in both backends (vec4, Ambient.rgb) instead
+  of the red channel alone
+- warn once per session when more than one directional light is present
+- add the ILightCollector seam; both renderers depend on the interface
+- drop the unused GPU-contract fields from the material schema
+- share the material-value drawer and the light colour/intensity drawer
+- use material key constants in the glTF importer; explicit types over var
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
