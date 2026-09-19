@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 8d822104d0cb1a57b4f50c0760cff48d478faa7b
 date: 2026-09-19T22:13:46+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -28,5 +28,6 @@ Lighting/material:
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
