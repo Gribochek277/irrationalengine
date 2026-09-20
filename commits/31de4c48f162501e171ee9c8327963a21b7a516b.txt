@@ -1,0 +1,25 @@
+repository: serhii/irrationalengine
+commit: 31de4c48f162501e171ee9c8327963a21b7a516b
+date: 2026-09-20T23:02:54+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+test: gizmo Unity handle set — picking, drag and hover coverage (#65)
+- Picking: plane squares pickable per pair and depth-first against the
+  arrows; center cube pickable from diagonal views (and the near-axis bar
+  correctly wins the exact front-view center, as in Unity); screen ring
+  pickable from diagonal views without stealing the coplanar axis ring
+  along the view axis. Existing 3-mode x 6-octant axis matrix still holds.
+- Manipulator: plane translate delta stays in the pair plane, is 1:1 and
+  survives edge-on views; uniform scale factor is radial and multiplicative;
+  screen-ring angle sign follows the right-hand rule and the orbit position
+  keeps the pivot fixed.
+- System: plane-square drags move in the pair plane 1:1, cube drags scale
+  all axes equally, screen-ring drags rotate around the view axis with 15
+  degree snap; hover reports the new handles.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
