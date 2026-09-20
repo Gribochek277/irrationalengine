@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 0e22b6db5b139bc393a0902f73c28faab932ecd8
 date: 2026-09-20T22:26:07+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -11,5 +11,6 @@ minimum level is taken from config instead of being hardcoded to Debug.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
