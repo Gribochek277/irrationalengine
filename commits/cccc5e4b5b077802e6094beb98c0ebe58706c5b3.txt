@@ -1,0 +1,22 @@
+repository: serhii/irrationalengine
+commit: cccc5e4b5b077802e6094beb98c0ebe58706c5b3
+date: 2026-09-20T22:28:08+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: two-level mesh GPU cache (static geometry per model, animation per object)
+Geometry (positions, UVs, normals, indices, bone attributes) is uploaded
+per model — scene objects sharing one model share one upload; bone UBOs
+and per-object GPU state belong to the scene object. Renderers delegate
+upload to IMeshGpuCache / backend refinements and only bind + draw.
+
+Removes VAO/VBO id storage from Model (OpenTK-era leftovers) and
+refreshes the CONTEXT.md glossary.
+
+ADR: docs/adr/mesh-gpu-cache-two-level-keying.md
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
