@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: d2a83f6995f505597fc44e28479a73fff1686991
+date: 2026-09-20T22:51:06+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: add AABB bounds and bone-extent geometry helpers (#70)
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
