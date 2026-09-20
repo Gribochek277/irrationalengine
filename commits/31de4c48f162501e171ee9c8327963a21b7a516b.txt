@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 31de4c48f162501e171ee9c8327963a21b7a516b
 date: 2026-09-20T23:02:54+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -21,5 +21,6 @@ test: gizmo Unity handle set — picking, drag and hover coverage (#65)
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
