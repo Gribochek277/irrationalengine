@@ -1,0 +1,30 @@
+repository: serhii/irrationalengine
+commit: 36e4fcb782cebb407a89ded821190f8c6019cd65
+date: 2026-09-20T23:02:49+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: gizmo Unity handle set — plane squares, uniform cube, screen ring (#65)
+Add Unity-parity handles to the gizmo rig:
+- Translate plane squares on the XY/YZ/XZ axis pairs: ray-picked quads at
+  the pair corner; drag moves the object 1:1 in the pair plane (ray-plane
+  intersection through the pivot, camera-plane fallback when edge-on).
+- Scale center cube: world-axis AABB at the pivot; uniform scale from the
+  radial relative mouse delta (anchor-position compensated).
+- Rotate screen ring: camera-oriented ring at a larger radius; rotation
+  around the view axis captured at grab, incremental screen-plane angle,
+  orbit-position corrected.
+
+A single GizmoHandle enum now identifies every handle across picking,
+hover, drag state and the overlay; picking stays depth-first (nearest ray
+depth wins). The bars' pick boxes are clamped so they never reach into the
+cube region; plane squares use a smaller pick margin so they cannot steal
+single-axis grabs from off-axis cameras. HoverHandle/ActiveHandle exposed
+for the cursor and highlight; both backends are unaffected (the rig is
+ImGui-drawn editor code). Supersedes #27 (camera-plane center translate).
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
