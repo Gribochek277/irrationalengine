@@ -1,0 +1,18 @@
+repository: serhii/irrationalengine
+commit: 65fd83cf33f23c70661a29bf77900d4bd99f7fd4
+date: 2026-09-21T16:34:11+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat(windows): wire polled game input + ImGui capture gate into GL/VK windows
+Both windows attach the shared SilkNetInputDeviceSource at load and detach it
+at unload. Each update tick the window derives the suppression flag from the
+editor UI capture flags (InputCaptureGate) and drives IInputService.Update(),
+so polled game input is not forwarded while an ImGui field has focus. Legacy
+KeyDown forwarding keeps its WantCaptureKeyboard guard.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
