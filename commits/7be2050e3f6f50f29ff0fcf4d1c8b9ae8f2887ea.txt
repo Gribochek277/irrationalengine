@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 7be2050e3f6f50f29ff0fcf4d1c8b9ae8f2887ea
 date: 2026-09-21T16:53:27+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -18,5 +18,6 @@ teleport seeding, disabled colliders/bodies and world-transform following.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
