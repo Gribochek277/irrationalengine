@@ -1,0 +1,19 @@
+repository: serhii/irrationalengine
+commit: e5d924e975443bf743bda8d69a75754f92132724
+date: 2026-09-21T16:38:12+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+test(audio): 46 unit tests for decode math, volumes, loop, reaping (#43)
+WAV byte-level decoding (8/16/24/32-bit PCM, IEEE float, extensible,
+chunk skipping, malformed input), OGG decode against committed ffmpeg
+fixtures (mono@44100 / stereo@22050), gain clamping/mapping, and the
+full service state machine on a mocked backend — replay/stop/stop-all,
+master-vs-channel re-application, finished-source reaping, cache
+behaviour and the no-device fallback. No real audio hardware needed.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
