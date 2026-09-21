@@ -1,0 +1,15 @@
+repository: serhii/irrationalengine
+commit: 059bc43db3cf91e7eea3725425fd126d39ac9e54
+date: 2026-09-21T18:44:26+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+chore(physics): drop unused IeUtils reference from IeCorePhysics
+Review note (PR #89): no IeCorePhysics source uses IeUtils; it arrives
+transitively via IeCoreEntities. Drop the direct ProjectReference.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
