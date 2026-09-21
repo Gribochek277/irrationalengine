@@ -1,0 +1,20 @@
+repository: serhii/irrationalengine
+commit: fb14e6630f0dcc5101f253f6736a3dc27c6e044d
+date: 2026-09-21T16:34:12+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+test(input): unit tests on fakes — delta, edges, axes, gate, Silk adapter
+36 new tests, no window: InputService delta accumulation/baseline, mouse and
+key edges, ImGui-capture suppression (and jump-free unsuppress), pointer-lock
+forwarding (incl. unsupported-backend drop), gamepad slots, virtual axes and
+legacy event; pure InputAxisResolver aggregation and clamping; the
+kb||mouse capture gate; and the Silk adapter's mouse/keyboard/gamepad mapping
+plus cursor-mode toggle on mocked Silk devices. Tests reference IeCore for the
+service/resolver.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
