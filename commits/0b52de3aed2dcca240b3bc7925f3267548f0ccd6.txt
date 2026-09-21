@@ -1,0 +1,31 @@
+repository: serhii/irrationalengine
+commit: 0b52de3aed2dcca240b3bc7925f3267548f0ccd6
+date: 2026-09-21T19:20:51+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix(input): accumulate per-event mouse delta and scroll in the adapter
+Reviewer P2: mouse delta was reconstructed by subtracting absolute float
+positions each tick. GLFW does not clamp or recenter the cursor under
+GLFW_CURSOR_DISABLED — the virtual position is unbounded, so after the
+drift passes ~2^23-2^24 px the float ULP reaches 1-2+ px and small motions
+quantify or vanish. The adapter now subscribes IMouse.MouseMove, sums the
+per-event deltas and resets on each read (baseline only for the first
+event); MouseState carries the accumulated Delta and InputService forwards
+it instead of computing one from history.
+
+Reviewer P3: GlfwMouse replaces ScrollWheels[0] on every scroll callback and
+resets it on each context update, so one poll per tick lost all but the last
+scroll event (high-res wheels, trackpads). The adapter now subscribes
+IMouse.Scroll and accumulates per-event scroll deltas the same way.
+
+The adapter is IDisposable (unsubscribes both handlers) and the ADR's
+'clamped to the window center' pointer-lock wording is corrected: GLFW
+keeps reporting the unbounded virtual position, which is what keeps deltas
+flowing while locked.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
