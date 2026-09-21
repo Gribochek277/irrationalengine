@@ -1,0 +1,38 @@
+repository: serhii/irrationalengine
+commit: ac061cfd06ef9ef03318ebefdc4a8b33d9a01bcc
+date: 2026-09-21T04:47:40+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix: address PR #86 review — cube pick margin, plane-square quad order, housekeeping
+P1 must-fixes (glm-5.3 review):
+- TryCube applied the pixel hit margin twice (unit-space CubeHalfSize +
+  world-space margin multiplied by scale again), making the pick box grow
+  quadratically with camera distance: it reached past the bar-shaft clamp
+  and stole inner-bar-shaft clicks, breaking the 'bars win along their
+  visible shafts' invariant; at close range it undershot the 12px margin.
+  Now HitRadiusWorld(CubeHalfSize, scale) — margin in world space exactly
+  once — matching the rendered/ShowHitAreas geometry and the bar clamp at
+  every rig scale.
+- DrawPlaneSquare emitted quad corners in diagonal order, rendering a
+  self-crossing bowtie polygon. Corner generation moved to a pure
+  GizmoManipulator.PlaneSquareCorners (perimeter order 0,1,3,2) so the
+  overlay fills a real square and the ordering is unit-testable.
+
+P3 nice-to-haves (done in the same pass):
+- GizmoManipulator.cs held two top-level types; GizmoAxis split into its
+  own file (one type per file).
+- ComputeOrbitPositionAxis dropped its unused startRotation parameter
+  (GizmoSystem + manipulator test call sites updated).
+- Restored the trailing newline at the end of GizmoHandlePicking.cs.
+
+Regression tests: far-rig-scale picking keeps the cube inside its region
+while the inner bar shaft stays grabbable as the axis (scale ~7, margin
+would previously overshoot ~4x), and the plane-square corner sequence has
+no diagonal jumps.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
