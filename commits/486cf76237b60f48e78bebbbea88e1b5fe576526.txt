@@ -1,0 +1,21 @@
+repository: serhii/irrationalengine
+commit: 486cf76237b60f48e78bebbbea88e1b5fe576526
+date: 2026-09-21T19:21:04+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+refactor(windows): share per-frame game-input wiring in GameInputDriver
+Reviewer note: the attach/tick/detach wiring (including the
+InputCaptureGate.SuppressGameInput derivation) was duplicated verbatim in
+SilkNetOpenGlWindow and SilkNetVulkanWindow. GameInputDriver
+(IeCoreEditor.Input) now owns it: AttachDeviceSource creates and attaches
+the adapter, Tick applies the gate and advances the service, and
+DetachDeviceSource detaches and disposes the adapter (the new IDisposable
+from the per-event handler subscriptions). Both windows call the three
+entry points and no longer carry the gate logic.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
