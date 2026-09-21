@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 8f3d2d11f1834f96cc60079982f3dce9b74694b1
 date: 2026-09-21T17:55:20+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -19,5 +19,6 @@ ADR updated: static per-clip buffer + narrow Play catch documented.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
