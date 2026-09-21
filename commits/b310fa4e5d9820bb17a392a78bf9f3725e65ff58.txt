@@ -1,0 +1,20 @@
+repository: serhii/irrationalengine
+commit: b310fa4e5d9820bb17a392a78bf9f3725e65ff58
+date: 2026-09-21T16:38:18+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+docs(audio): ADR — OpenAL vs SDL, NVorbis choice, Windows packaging (#43)
+Records the priority-check findings the issue demanded: Silk.NET.OpenAL
+2.18.0 targets netstandard2.0 and works on net10.0; Windows has no
+system OpenAL, so the Silk.NET.OpenAL.Soft.Native package ships the
+soft-oal implementation next to the exe — packaging is not a blocker.
+Also captures the IAudioBackend seam (DIP/OCP), the NVorbis decoder
+choice and the headless no-device fallback. Issue tracker note updated
+with the implementation record.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
