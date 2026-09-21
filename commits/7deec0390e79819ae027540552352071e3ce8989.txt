@@ -1,0 +1,19 @@
+repository: serhii/irrationalengine
+commit: 7deec0390e79819ae027540552352071e3ce8989
+date: 2026-09-21T16:33:10+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat(interfaces): polled input v2 contracts — device source seam and engine-neutral state
+Extend IInputService additively (legacy KeyPressed event untouched) with the
+polled v2 surface: key/mouse/gamepad polls, edges, virtual axes, pointer lock
+and the ImGui-capture suppression flag. Add IInputDeviceSource — the
+backend-neutral seam the window attaches — plus the InputKey/InputMouseButton/
+InputGamepadButton/InputAxis enums and MouseState/KeyboardState/GamepadState
+readings. No Silk.NET types cross the interface boundary (DIP).
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
