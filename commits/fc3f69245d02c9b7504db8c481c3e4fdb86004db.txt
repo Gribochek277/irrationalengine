@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: fc3f69245d02c9b7504db8c481c3e4fdb86004db
 date: 2026-09-21T16:38:06+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -15,5 +15,6 @@ No OpenAL types leak past the seam; no device needed for tests.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
