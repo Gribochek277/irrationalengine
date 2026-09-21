@@ -1,0 +1,19 @@
+repository: serhii/irrationalengine
+commit: b5c5d26c2f8d6b9befe07ab45fb53651520fce6c
+date: 2026-09-21T16:34:04+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat(editor): shared Silk.NET input adapter + ImGui capture gate
+SilkNetInputDeviceSource adapts the Silk.NET IInputContext to the
+engine-neutral IInputDeviceSource for both windows (single key-mapping
+switch instead of one per backend). Pointer lock maps to
+ICursor.CursorMode.Disabled (GLFW pointer lock). InputCaptureGate is the pure
+kb||mouse decision the windows use to suppress game input while ImGui owns a
+focused field.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
