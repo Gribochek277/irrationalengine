@@ -1,0 +1,21 @@
+repository: serhii/irrationalengine
+commit: 2fab1dc7c9779fb806b57c9e48f2f2432dd0b74f
+date: 2026-09-21T16:34:04+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat(engine): polled InputService — mouse delta, edges, pointer lock, axes
+InputService now polls the attached device source each Update(): acumulates
+mouse position/delta history, computes key/mouse button edges, tracks 16
+gamepad slots and applies pointer-lock requests on change (unsupported
+backends drop the request once with a warning). While SuppressGameInput is
+set, all state reads neutral, but raw history still advances so unsuppressing
+is jump-free. Axis aggregation (WASD/arrows + left stick -> MoveX/MoveY,
+right stick/triggers -> Look/triggers, clamped [-1,1]) is a pure static
+resolver.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
