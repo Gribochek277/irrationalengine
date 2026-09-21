@@ -1,0 +1,17 @@
+repository: serhii/irrationalengine
+commit: 7aab988a010e95fc36c0478c71e948257d8d0666
+date: 2026-09-21T16:34:12+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+docs: ADR input-service-v2 — polled input, pointer lock, gamepad, ImGui gate
+Records the checked Silk.NET 2.18 API facts (CursorMode.Disabled is GLFW
+pointer lock; the GLFW input backend already reads glfwGetGamepadState with
+the standard mapping; no raw Glfw call needed), the extended-contract decision,
+the shared-adapter placement, and the jump-free suppression semantics.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
