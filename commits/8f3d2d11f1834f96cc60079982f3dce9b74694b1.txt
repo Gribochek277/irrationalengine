@@ -1,0 +1,23 @@
+repository: serhii/irrationalengine
+commit: 8f3d2d11f1834f96cc60079982f3dce9b74694b1
+date: 2026-09-21T17:55:20+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix(audio): validate RIFF/WAVE magic in WavParser (PR #88 review P3)
+FourCc.Riff/FourCc.Wave were declared but unused — Parse skipped the
+12-byte header blindly and scanned for 'fmt ', so a non-WAV file that
+happened to contain plausible chunk tags would decode into garbage instead
+of throwing InvalidDataException as the doc comment promised
+(ParseRejectsNonRiffBytes passed only incidentally: its junk had no fmt
+chunk). Parse now asserts 'RIFF' at offset 0 and 'WAVE' at offset 8 and
+rejects files shorter than the container header. Tests: corrupted RIFF
+magic, corrupted WAVE tag, plausible chunks with XIFF magic, short header.
+
+ADR updated: static per-clip buffer + narrow Play catch documented.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
