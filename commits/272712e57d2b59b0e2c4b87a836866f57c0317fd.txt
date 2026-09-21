@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 272712e57d2b59b0e2c4b87a836866f57c0317fd
 date: 2026-09-21T17:54:51+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -17,5 +17,6 @@ case-insensitive filesystems, where the aliasing cannot occur).
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
