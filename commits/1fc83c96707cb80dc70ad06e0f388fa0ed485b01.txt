@@ -1,0 +1,22 @@
+repository: serhii/irrationalengine
+commit: 1fc83c96707cb80dc70ad06e0f388fa0ed485b01
+date: 2026-09-21T18:43:57+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix(physics): grow skinned mesh colliders by the bone extent
+Review fix (PR #89, P3): the mesh-AABB default now expands each skinned
+mesh by BoneExtent.Compute before the baked transform — the same margin
+the Cull stage applies — so animated limbs stay inside the collider box
+and the 'same bounds frustum culling renders' claim is now exact. A
+vertex-less skeleton (no bones) still yields extent 0.
+
+Test: a skinned box mesh with a 0.5-translated bone root expands the
+collider by 0.5 on every side. Docs (interface, CONTEXT glossary)
+updated to state the bone-extent margin.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
