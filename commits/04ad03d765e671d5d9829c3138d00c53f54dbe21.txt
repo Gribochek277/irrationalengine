@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 04ad03d765e671d5d9829c3138d00c53f54dbe21
 date: 2026-09-21T04:55:44+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -9,5 +9,6 @@ docs: bone extent is a heuristic margin, not a guaranteed bound (#70)
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
