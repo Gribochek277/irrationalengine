@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 7aab988a010e95fc36c0478c71e948257d8d0666
 date: 2026-09-21T16:34:12+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -13,5 +13,6 @@ the shared-adapter placement, and the jump-free suppression semantics.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
