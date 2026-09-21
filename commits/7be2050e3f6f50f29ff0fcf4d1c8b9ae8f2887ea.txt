@@ -1,0 +1,22 @@
+repository: serhii/irrationalengine
+commit: 7be2050e3f6f50f29ff0fcf4d1c8b9ae8f2887ea
+date: 2026-09-21T16:53:27+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: scene integration — collider component, kinematic body, per-frame physics updater
+IColliderComponent declares a static AABB on a scene object (default =
+model-space mesh AABB, same bounds math as frustum culling; explicit
+Size/Offset override), wired to the model component by SceneObject.OnLoad
+like IAnimationComponent. KinematicBodyComponent owns a capsule body;
+IPhysicsUpdater (registered beside the animation stage, run by SceneManager
+before rendering) rebuilds the AABB world from enabled colliders each frame,
+steps bodies and writes the feet back to the scene-object transform. 7 new
+engine tests cover mesh-AABB defaults, explicit boxes, updater landing,
+teleport seeding, disabled colliders/bodies and world-transform following.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
