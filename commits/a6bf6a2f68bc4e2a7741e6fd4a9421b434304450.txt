@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: a6bf6a2f68bc4e2a7741e6fd4a9421b434304450
 date: 2026-09-21T16:38:15+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -13,5 +13,6 @@ same audio layer serves both Vulkan and OpenGL.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
