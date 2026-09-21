@@ -1,0 +1,25 @@
+repository: serhii/irrationalengine
+commit: 3373010eed747507b86857546b6c03aa249aa5c9
+date: 2026-09-21T18:44:13+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix(physics): clamp per-step vertical motion to stop ceiling tunnelling
+Review fix (PR #89, P3): X and Z were clamped by MaxHorizontalStep but
+delta.Y was not, and the solver's rising branch has no sweep ray — a
+200 m/s launch passed straight through a 0.05-thick ceiling with
+HitCeiling = false. KinematicCapsuleBody now clamps delta.Y by a new
+MoveAndSlideSettings.MaxVerticalStep (default 1.5, same as horizontal);
+keeping the clamp at or below the capsule height means a step can never
+clear a box top end-to-end, so the post-move overlap test always sees it.
+Downward stays ray-grounded as before.
+
+Regression test: a 200 m/s launch under a 0.05-thick slab hits the
+ceiling on the first clamped ascent (flag set, upward velocity zeroed)
+and never rises above the slab's bottom face over 60 frames.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
