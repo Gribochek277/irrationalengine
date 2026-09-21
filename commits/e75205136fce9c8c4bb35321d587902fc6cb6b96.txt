@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: e75205136fce9c8c4bb35321d587902fc6cb6b96
 date: 2026-09-21T05:06:31+03:00
 author: serhii <serhii@localhost>
@@ -9,5 +9,6 @@ Merge pull request 'feat: transparency — alpha mask/blend + back-to-front sort
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
