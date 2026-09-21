@@ -1,0 +1,18 @@
+repository: serhii/irrationalengine
+commit: f47c66a8d68d8d6f573e98edc0be1290284edf80
+date: 2026-09-21T18:44:26+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix(tests): assert nullable hits in GroundCastTests (CS8629)
+Review fix (PR #89, P3): two tests dereferenced hit.Value without a null
+guard, so a clean build reported two CS8629 warnings in
+IeCorePhysics.Tests — the PR's 0-warning claim did not hold. Add
+Assert.NotNull before the dereference (the pattern the other test in the
+file already used); the full solution now builds with 0 warnings.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
