@@ -1,0 +1,19 @@
+repository: serhii/irrationalengine
+commit: fc3f69245d02c9b7504db8c481c3e4fdb86004db
+date: 2026-09-21T16:38:06+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat(audio): backend-agnostic audio core — WAV/OGG decode, channels, service (#43)
+IeCoreAudio: pure WavParser (PCM 8/16/24/32 + IEEE float, mono/stereo,
+extensible sub-formats, chunk skipping), OggVorbisDecoder over NVorbis
+(float -> PCM16), AudioGain volume math (master x channel, clamped),
+IAudioBackend device seam for DIP, and DefaultAudioService orchestrating
+clip cache, per-channel volumes, replay/loop semantics and lazy reaping.
+No OpenAL types leak past the seam; no device needed for tests.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
