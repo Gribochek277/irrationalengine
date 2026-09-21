@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 0b52de3aed2dcca240b3bc7925f3267548f0ccd6
 date: 2026-09-21T19:20:51+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -27,5 +27,6 @@ flowing while locked.
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
