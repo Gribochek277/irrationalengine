@@ -1,0 +1,21 @@
+repository: serhii/irrationalengine
+commit: 272712e57d2b59b0e2c4b87a836866f57c0317fd
+date: 2026-09-21T17:54:51+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix(audio): case-sensitive clip cache — distinct files stay distinct (PR #88 review P2)
+StringComparer.OrdinalIgnoreCase treated 'Shot.wav' and 'shot.wav' as one
+cache key; on a case-sensitive filesystem (Linux, primary dev platform)
+those are two different files, so the second LoadClip silently returned
+the first clip's audio. Use StringComparer.Ordinal — GetFullPath already
+normalizes separators, and on Windows a case-variant path just re-decodes
+into a second cache entry (safe). Regression test loads two case-variant
+files with different PCM and asserts distinct clips and data (skips on
+case-insensitive filesystems, where the aliasing cannot occur).
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
