@@ -1,0 +1,21 @@
+repository: serhii/irrationalengine
+commit: 5f73149a5d72b2cbe74361fe3f495df457b6abb8
+date: 2026-09-21T16:38:09+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat(audio): Silk.NET OpenAL backend with bundled native library (#43)
+OpenAlAudioBackend implements IAudioBackend on Silk.NET.OpenAL 2.18.0
+(single bindings vendor): device/context lifecycle, static PCM16 buffer
+upload, gain/loop source properties, source-state polling for reaping,
+and a graceful unavailable mode (no device -> logged no-op, engine keeps
+running). Silk.NET.OpenAL.Soft.Native 1.23.1 bundles the OpenAL Soft
+software implementation (soft_oal.dll on Windows, libopenal.so/dylib
+elsewhere) — see docs/adr/audio-service-openal.md for the packaging
+finding. AddOpenAlAudio() wires one audio layer for both render backends.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
