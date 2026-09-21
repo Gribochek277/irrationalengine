@@ -1,0 +1,31 @@
+repository: serhii/irrationalengine
+commit: ae81961736cd31d20acbd8e16a7858f7754fe770
+date: 2026-09-21T18:42:13+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+fix(physics): self-collision guard, authored-transform resume, fallback log
+Review fixes for the physics update stage (PR #89 review, P2 + P3):
+
+- P2: RegisterCollider now skips an object's box while it carries an
+  enabled kinematic body — a 'solid NPC' (collider + body) no longer
+  fights its own box (ejection + perpetual drift). A paused body keeps
+  its box, so the object acts as a static obstacle.
+- P3: the body re-seeds from the scene-object transform whenever it
+  diverges from the body's remembered feet (first frame or an authored
+  move while paused), so resuming respects the edit instead of snapping
+  back to the pre-pause position.
+- P3: a vertex-less model's 1x1x1 unit-box fallback is now surfaced —
+  IColliderComponent.MeshDefaultFailed (no-model is not a failure) and
+  PhysicsUpdater logs a Warning once per object.
+
+Regression tests: body+collider rests in place over 240 frames (fails
+with X = -1.7 drift when the guard is removed), paused body stays solid
+for other bodies, pause/move/resume keeps the authored transform, and
+the fallback warning fires exactly once over 60 frames.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
