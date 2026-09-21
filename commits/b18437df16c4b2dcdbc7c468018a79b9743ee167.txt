@@ -1,0 +1,20 @@
+repository: serhii/irrationalengine
+commit: b18437df16c4b2dcdbc7c468018a79b9743ee167
+date: 2026-09-21T16:53:21+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+feat: kinematic collision layer — capsule/AABB world, move-and-slide solver
+Pure headless physics module (IeCorePhysics, mirrors IeCoreRenderPipeline):
+capsule shape, capsule-vs-AABB queries (closest points, conservative
+overlap, penetration), ground ray, axis-by-axis move-and-slide solver with
+wall sliding, step-up, ceiling stop and ray-grounded landing, AABB world
+container and a kinematic capsule body with gravity integration. All move
+math is deterministic and covered by 42 unit tests (wall angle, step,
+ground, stop-at-wall, fall off edges) with zero scene/window dependency.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
