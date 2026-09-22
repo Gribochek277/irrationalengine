@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: ab1f3be811e6d352cc00793b31000fdf005824ba
 date: 2026-09-22T18:44:18+03:00
 author: serhii <serhii@localhost>
@@ -9,5 +9,6 @@ Merge pull request 'feat: kinematic collision layer — AABB world, capsule, mov
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
