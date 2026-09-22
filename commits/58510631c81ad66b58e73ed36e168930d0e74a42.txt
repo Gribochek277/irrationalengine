@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 58510631c81ad66b58e73ed36e168930d0e74a42
+date: 2026-09-22T18:22:40+03:00
+author: serhii <serhii@localhost>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+Merge pull request 'feat: polled input service v2 — mouse delta, pointer lock, gamepad, axes (#39)' (#87) from feature/input-service-v2 into main
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
