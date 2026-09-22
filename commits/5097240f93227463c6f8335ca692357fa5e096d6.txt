@@ -1,0 +1,13 @@
+repository: serhii/irrationalengine
+commit: 5097240f93227463c6f8335ca692357fa5e096d6
+date: 2026-09-22T18:37:22+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+merge: resolve .sln conflict with main (audio + input + physics projects)
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
