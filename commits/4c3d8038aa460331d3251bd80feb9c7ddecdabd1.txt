@@ -1,0 +1,44 @@
+repository: serhii/irrationalengine
+commit: 4c3d8038aa460331d3251bd80feb9c7ddecdabd1
+date: 2026-09-30T07:24:58+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs
+
+message:
+feat(cameras): FPS and third-person game camera rigs (#51)
+Splits the game cameras from the editor's orbit camera and adds the two rigs the
+roadmap needs, with their math as a tested pure kernel.
+
+- CameraRigMath (pure): yaw/pitch to forward/right/up, the ±89° pitch clamp, yaw
+  wrapping, one look step (1 pixel = sensitivity radians) and the orbit eye
+  position. Documents the engine's camera angle convention in one place.
+- FpsCameraRig: eye at the rig's position (the character's head once #59 drives
+  it), mouse look with the clamped pitch, optional pointer lock. OnUnload releases
+  a lock it took.
+- ThirdPersonCameraRig: orbits a pivot at a distance with an over-the-shoulder
+  offset, mouse look and wheel zoom inside a distance range, optional pointer lock.
+  Wall pull-in stays with #60, which only has to shorten Distance.
+- The scene ticks its "Camera" components in DefaultScene.OnUpdated, after the
+  window polled the input service and before the renderer reads the view matrix;
+  the editor's orbit camera has a no-op OnUpdated there, so nothing is double-driven.
+- Pointer lock is opt-in (LockPointer, default false): arming it by default would
+  capture the cursor in a plain engine run, and #58 decides when a running game owns
+  the pointer.
+- The legacy Camera is deleted: with the two rigs there is one game camera set, and
+  it threw NotImplementedException on two interface members (LSP) and produced NaN
+  in Move when no direction was given. The demo scene now uses the FPS rig at the
+  same vantage point, so the framing is unchanged.
+- OrbitCamera is untouched behaviourally; only its doc comment (which named the
+  deleted class) was updated.
+
+Tests: 49 new (30 pure math, 19 rig) — basis at every yaw, the clamp at and past
+±89°, yaw wrap properties, 1:1 look, orbit at distance/shoulder/pitch, the view
+matrix basis, look/zoom from the input service, pointer lock request and release,
+lifecycle no-ops, and NaN-free Move.
+
+Closes #51
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
