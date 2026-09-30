@@ -1,0 +1,66 @@
+repository: serhii/irrationalengine
+commit: 7aa964278b8964094f0e794bccb5e9d3cc2ac677
+date: 2026-09-30T03:10:30+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+refactor: align layout, naming and SRP across the solution
+Applies the folder, one-type-per-file and SOLID rules from AGENTS.md to the whole
+solution, using the in-progress Updating/ -> Physics/ + SkeletalAnimation/ move as
+the reference pattern. Includes that in-progress work.
+
+Hygiene
+- generated documentation XMLs no longer land in the source tree: the Debug
+  DocumentationFile pointed at each project root and IeCoreEntites.xml was misspelt,
+  so the files were committed build artifacts
+- removed empty leftovers (IeCoreInterfaces/Helpers, IrrationalEngine/Resources/*),
+  a stale <Folder Include="Behaviour\">, and a malformed .sln entry for IeCorePhysics.Tests
+- AssetManager's dead "IrrationalEngine/IeCore/Resources" probe replaced by an ordered
+  resource-root list, logging a warning when nothing resolves
+- RenderBackend and SceneHierarchyItem moved into their own files
+
+Naming and layout
+- IResizable.cs, IAssetManager.cs, UniformHelper.cs, IPrimitivesFactory/PrimitivesFactory,
+  AssimpExtensions.cs (filenames now match their types)
+- IeCoreRenderPipeline.Lighting/.Shaders namespaces now mirror their folders
+- asset importers -> Models/Gltf, Models/Fbx, Textures
+- IOpenGlContext -> Rendering/; EditorActions/ -> Editing/, removing the namespace that
+  shadowed the EditorActions class
+- test namespaces normalised (IeCoreEditorUnitTests -> IeCoreEditor.Tests); the solution
+  now has zero namespace<->folder mismatches
+- shared fakes extracted into Tests/IeCore.TestSupport; misplaced input tests and their
+  fake moved to IeCore.Tests
+
+SRP splits
+- IMeshBoundsProvider: one owner of per-mesh AABB and bone extent, replacing three
+  separate implementations (culling, collider default box, gizmo anchor)
+- VulkanRenderer 1293 -> 779 lines (VulkanFrameResources, VulkanMaterialCache,
+  VulkanMatrixPacker, GpuMaterial)
+- GltfToEntityMapper 848 -> 46 lines + nine per-domain mappers
+- GizmoManipulator 858 -> five focused classes; EditorUI 683 -> 358 + four collaborators
+- ImGuiPropertyDrawer 536 -> five files; EditorActions, AssetsDockPanel,
+  VulkanTexturePipeline, the OpenGL Renderer, ModelComponent, DefaultScene and
+  SceneManager split along their own seams
+- SceneManager.OnUnload and DefaultScene's lifecycle hooks no longer throw
+  NotImplementedException (LSP)
+
+Architecture
+- new IeCoreEditorInterfaces project holding the editor contracts and gizmo value types
+- new IGameInputDriver contract, so the window backends stop importing the editor
+  implementation; only the composition root (IeCore) references IeCoreEditor now
+
+Regression fixed
+- EditorInputRouter (extracted above) captured the framebuffer size at construction,
+  so gizmo picking used stale dimensions once the window manager tiled the window: the
+  handles were drawn but could not be grabbed. One shared EditorViewport now feeds both
+  the projection and the picking, covered by EditorInputRouterTests (verified to fail
+  with the bug reintroduced).
+
+Verified: Debug and Release build with 0 warnings / 0 errors, 590 tests pass,
+dotnet format --verify-no-changes is clean.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
