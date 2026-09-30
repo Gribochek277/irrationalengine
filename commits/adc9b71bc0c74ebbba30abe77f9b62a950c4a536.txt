@@ -1,0 +1,14 @@
+repository: serhii/irrationalengine
+commit: adc9b71bc0c74ebbba30abe77f9b62a950c4a536
+date: 2026-09-30T03:24:25+03:00
+author: serhii <serhii@localhost>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main
+
+message:
+Merge pull request 'refactor: align layout, naming and SRP across the solution' (#91) from refactor/srp-and-layout into main
+Reviewed-on: http://100.110.77.11/serhii/IrrationalEngine/pulls/91
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
