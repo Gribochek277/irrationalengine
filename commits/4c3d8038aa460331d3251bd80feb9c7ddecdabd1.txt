@@ -1,8 +1,8 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 4c3d8038aa460331d3251bd80feb9c7ddecdabd1
 date: 2026-09-30T07:24:58+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
-branches: feature/game-camera-rigs
+branches: feature/game-camera-rigs,main
 
 message:
 feat(cameras): FPS and third-person game camera rigs (#51)
@@ -40,5 +40,6 @@ Closes #51
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
