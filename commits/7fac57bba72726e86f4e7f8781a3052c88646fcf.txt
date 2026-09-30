@@ -1,4 +1,4 @@
-repository: serhii/irrationalengine
+repository: serhii/IrrationalEngine
 commit: 7fac57bba72726e86f4e7f8781a3052c88646fcf
 date: 2026-09-30T03:10:40+03:00
 author: Serhii <36171312+Gribochek277@users.noreply.github.com>
@@ -25,5 +25,6 @@ docs: record the editor-contracts and mesh-bounds decisions
 
 ---
 Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
 README (if any) is available in the repo root.
 If you need the code, email: sergeyalpatov1@gmail.com
