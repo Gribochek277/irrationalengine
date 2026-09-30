@@ -1,0 +1,36 @@
+repository: serhii/irrationalengine
+commit: 2143bad1e76afdd31dd81e4ebd60c0bd3a19da07
+date: 2026-09-30T06:36:47+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main
+
+message:
+feat(physics): scene queries — raycast and sphere overlap (#52)
+Adds the scene-facing query surface over the collision layer, so the camera
+pull-in (#60), hitscan weapons (#61) and the character controller (#59) can ask
+the world questions.
+
+- IeCorePhysics.PhysicsQueries (pure): ray-vs-AABB by the slab method returning
+  the entry point, the entered face normal, the distance and the box index, plus
+  sphere-vs-box overlap. Nearest hit for a box list; tangency counts as contact;
+  a ray that starts inside a box hits at distance 0 with the normal facing back
+  along the ray.
+- PhysicsWorldState (IeCore): the frame's AabbWorld plus an index-aligned identity
+  list (PhysicsBoxEntry: box + scene object + collider). PhysicsUpdater fills it,
+  so movement and queries read the same world — the self-collision guard included.
+- IScenePhysicsQueries (IeCoreInterfaces.Physics) and ScenePhysicsQueries map box
+  indices back to ScenePhysicsHit (object, collider, point, normal, distance).
+  OverlapSphere appends to the caller's list amortised and allocates nothing per
+  frame (one reused index buffer).
+
+Tests: 28 pure (hit/miss/tangent/nearest/inside/parallel/degenerate direction and
+distance cases, sphere hit/miss/tangency/corner/collection) and 15 scene-level
+(identity mapping, object transform, disabled colliders, nearest across objects,
+frame rebuild, self-collision guard).
+
+Closes #52
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
