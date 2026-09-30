@@ -1,0 +1,14 @@
+repository: serhii/irrationalengine
+commit: 196cde354fa51d878b38ee14fc088fafd84b5132
+date: 2026-09-30T07:09:43+03:00
+author: serhii <serhii@localhost>
+branches: feature/game-camera-rigs,main
+
+message:
+Merge pull request 'feat(physics): scene queries — raycast and sphere overlap (#52)' (#92) from feature/physics-scene-queries into main
+Reviewed-on: http://100.110.77.11/serhii/IrrationalEngine/pulls/92
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
