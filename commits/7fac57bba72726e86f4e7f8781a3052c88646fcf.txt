@@ -1,0 +1,29 @@
+repository: serhii/irrationalengine
+commit: 7fac57bba72726e86f4e7f8781a3052c88646fcf
+date: 2026-09-30T03:10:40+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: feature/game-camera-rigs,feature/physics-scene-queries,main,refactor/srp-and-layout
+
+message:
+docs: record the editor-contracts and mesh-bounds decisions
+- new ADR editor-contracts-project: the editor contracts live in their own project so
+  no graphics backend depends on the editor implementation (rejected the alternative of
+  pulling ImGui.NET and Silk.NET.Input into IeCoreInterfaces)
+- new ADR mesh-bounds-single-owner: one IMeshBoundsProvider for culling, the collider
+  default box and the gizmo anchor
+- physics ADR: the "reuse MeshBoundsCache" alternative was rejected at the time and is
+  reversed by that change - recorded with the reasoning, plus why IKinematicBodyComponent
+  stays in IeCorePhysics rather than being hoisted into the core contracts
+- frustum ADR: MeshBoundsCache is now the shared provider, not culling-only
+- gizmo ADR: the pure math lives in five domain classes now
+- comparison spec: Appendix B pointed at shader and device files that no longer exist
+- CONTEXT.md: glossary entries (mesh bounds provider, editor contracts, game input
+  driver, resource locator) and a complete architecture list
+- AGENTS.md: "one domain per folder" reworded to "one domain and/or category per
+  folder" - category folders name real concepts; only layer/lifecycle grouping is the
+  smell. Project structure and dependency rules refreshed.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
