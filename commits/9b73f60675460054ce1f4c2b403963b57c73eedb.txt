@@ -1,0 +1,23 @@
+repository: serhii/IrrationalEngine
+commit: 9b73f60675460054ce1f4c2b403963b57c73eedb
+date: 2026-10-07T11:46:50+03:00
+author: pi-agent <pi-agent@local>
+branches: ticket/26-animation-clip-names
+
+message:
+feat(editor): expand nested locomotion settings in the inspector (#68)
+The character controller's Locomotion blend configuration (idle/walk/run clip
+names and speeds) was a read-only label. InspectorExpandAttribute marks a
+nested settings property the reflection drawer should expand into an editable
+sub-tree, so every parameter of the new components is editable without code.
+
+- InspectorExpandAttribute in IeCoreInterfaces (interface-member lookup like
+  HideInInspectorAttribute); tagged on CharacterControllerComponent.Locomotion.
+- ReflectionPropertyDrawer expands tagged properties up to a depth cap.
+- Tests for the tag rule and the visible locomotion fields.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
