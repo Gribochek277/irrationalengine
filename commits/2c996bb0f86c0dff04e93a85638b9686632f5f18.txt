@@ -1,0 +1,30 @@
+repository: serhii/IrrationalEngine
+commit: 2c996bb0f86c0dff04e93a85638b9686632f5f18
+date: 2026-10-07T11:41:24+03:00
+author: pi-agent <pi-agent@local>
+branches: ticket/26-animation-clip-names
+
+message:
+feat(editor): collider overlay, viewport picking and physics debug (#68)
+Gitea #68's expanded scope: the collision layer is visible and selectable in
+the scene view, and the selected kinematic body shows its velocity and contact
+state.
+
+- ColliderBoxMath/BoxRayPicking/SceneViewProjection: pure, tested geometry that
+  matches PhysicsUpdater (local bounds transformed by the object matrix).
+- ColliderOverlay draws every enabled collider's world box; the selected one is
+  highlighted; toggled from the Debug menu.
+- SceneViewPicker selects the nearest collider under the cursor; the input
+  router runs it when a left click did not grab a gizmo handle, so clicking a
+  collider selects the object and the existing gizmo moves it.
+- PhysicsDebugOverlay draws the selected kinematic body's velocity vector and
+  grounded/step/ceiling/wall readout.
+- IeCoreEditor references IeCorePhysics (editor is the high-level consumer).
+- Tests: box/ray math, nearest picking, projection rejection behind the camera,
+  body lookup and the router's fall-through to viewport picking.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
