@@ -1,0 +1,41 @@
+repository: serhii/IrrationalEngine
+commit: 86bfafe395703702fa7acbd4af5a1a984002dd32
+date: 2026-10-07T08:40:56+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+feat(content): scene serialization — JSON round-trip, save/load (#44)
+Add scene ↔ JSON persistence built on one codec per component:
+
+- ISceneSerializer contract (IeCoreInterfaces) + JsonSceneSerializer (IeCore)
+  with ISceneComponentCodec implementations for model, material, light,
+  collider, animation and camera.
+- Components are keyed by name in the document, so a component this build
+  does not know is skipped with a warning (forward compatibility); enums are
+  written by name and vectors as arrays.
+- Assets are stored by name + file path and resolved through IAssetManager;
+  a missing asset skips its component instead of failing the load.
+- DefaultScene loads a scene file selected by engine.json (Scene.Path) and
+  falls back to the demo scene when the path is unset or missing, gating the
+  JSON load so an unconfigured run still shows the character/combat demo.
+- Editor: ISceneFileActions/SceneFileActions plus Save/Load Scene toolbar
+  buttons; loading keeps the editor camera so the view keeps working.
+- ColliderComponent exposes HasExplicitBox, so a mesh-derived default is
+  recomputed on load instead of frozen into the file.
+- Tests: round-trip of lights/collider/transform, material enum fields and
+  texture references, unknown-component warning, camera rig pose, file
+  save/load, editor file actions and config-driven scene startup.
+- ADR docs/adr/scene-serialization-json.md records the format decisions.
+
+Rebased onto main and reconciled with the merged character (#59), combat
+(#53) and hitscan (#61) demo wiring, the action-map config (#54) and the
+binary asset cache (#45): DefaultScene keeps the character controller,
+ground/props/target, damage and camera-swap hotkeys and weapon wiring, and
+only prepends the configured-scene gate to OnLoad.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
