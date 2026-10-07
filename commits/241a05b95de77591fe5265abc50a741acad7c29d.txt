@@ -1,0 +1,38 @@
+repository: serhii/IrrationalEngine
+commit: 241a05b95de77591fe5265abc50a741acad7c29d
+date: 2026-10-07T06:06:37+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+feat(combat): health, damage, hit-flash and death (#53)
+Add the combat flow shared by the player and enemies:
+
+- Pure `Health` model (current/max, TakeDamage, Damaged/Died events,
+  overkill and ignored-after-death) plus `DamageInfo`/`DamageResult`.
+- `IHealthComponent`/`HealthComponent` as the scene-object seam.
+- `IDamageService`/`DamageService`: resolves the target's health by
+  interface, applies the hit, flashes on every applied hit and on a
+  lethal hit disables the `IGameplayController` seam and fires the
+  state machine's "death" transition.
+- `IHitFlashComponent`/`HitFlashComponent`: frame-counted diffuse and
+  ambient material override that preserves the alpha and restores the
+  authored colours; `IHitFlashUpdater`/`HitFlashUpdater` age it once
+  per frame, run by SceneManager after the state-machine stage.
+- `IGameplayController` one-member enable seam for the character
+  controller (#59).
+- SceneObject wires the material component into the hit flash; the
+  composition root registers the damage service and hit-flash stage.
+- Demo scene gives the Knight health + hit flash and binds `H` to a
+  damage request, so the flash is visible without the game host.
+- ADR + CONTEXT.md glossary entries.
+
+Unit tests cover damage, lethal, overkill, ignored-after-death,
+invalid damage, event order, the flash countdown/restore/re-trigger,
+the death reaction order and the scene-object wiring.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
