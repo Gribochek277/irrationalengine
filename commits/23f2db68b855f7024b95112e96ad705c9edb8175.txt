@@ -1,0 +1,14 @@
+repository: serhii/IrrationalEngine
+commit: 23f2db68b855f7024b95112e96ad705c9edb8175
+date: 2026-10-07T12:44:43+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: tmp/ci-red-verify
+
+message:
+tmp: probe that -warnaserror fails the CI run
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
