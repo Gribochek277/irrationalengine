@@ -1,0 +1,29 @@
+repository: serhii/IrrationalEngine
+commit: 4c97f32d68adad579b2c5ee8803bef7f8d415769
+date: 2026-10-07T11:15:57+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+feat(audio): 3D positional — camera listener, emitter components (#62)
+Positional audio: the game camera carries a listener whose pose is derived
+from the active camera each frame, and scene objects can carry an emitter
+component with an audio-asset field, distance attenuation and panning.
+
+- IeCoreInterfaces: AudioListenerPose/AudioEmitterSettings value types,
+  IAudioService.SetListener/PlayAt/UpdateEmitterPosition, IAudioUpdater,
+  IAudioEmitterComponent/IAudioListenerComponent.
+- IeCoreAudio: pure AudioListenerMath (view matrix -> listener pose) and
+  AudioSpatialization (inverse-distance clamped attenuation); the service
+  applies attenuation, the backend only pans.
+- IeCoreAudioOpenAl: listener pose + positional sources (rolloff 0).
+- IeCore: AudioEmitterComponent/AudioListenerComponent and the AudioUpdater
+  frame stage, run last by SceneManager; demo camera carries the listener.
+- IeCoreEditor: AudioClip object field (path/Load/clear/drag-drop).
+- Tests + ADR (docs/adr/audio-3d-positional.md) and CONTEXT glossary entries.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
