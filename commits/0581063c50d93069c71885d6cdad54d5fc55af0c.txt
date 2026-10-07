@@ -1,0 +1,37 @@
+repository: serhii/IrrationalEngine
+commit: 0581063c50d93069c71885d6cdad54d5fc55af0c
+date: 2026-10-07T12:18:55+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+feat(window): fullscreen/vsync modes on both backends (#46)
+Add a runtime presentation contract to the window abstraction and implement
+it on the OpenGL and Vulkan backends, including the resize transition that
+keeps the renderer viewport and ImGui on the same framebuffer size.
+
+- IWindowController (WindowMode, VSync, SetWindowMode, SetVSync) is the narrow
+  runtime surface; IWindow inherits it and WindowSettings gains the initial
+  VSync flag (default on) so engine.json selects the start-up policy.
+- Both windows apply the mode via the platform window state and then resync
+  the renderer viewport and the editor UI from the current framebuffer, with a
+  zero-size guard so a minimised/mid-transition window cannot divide by zero.
+  F11 toggles fullscreen; the editor toolbar's Window menu toggles mode and
+  vsync through the same contract.
+- OpenGL realises vsync as the GLFW swap interval. Vulkan has no swap interval,
+  so the window asks IVulkanRenderer to change the present mode and the pure
+  VulkanPresentModeSelector picks FIFO when vsynced and MAILBOX -> IMMEDIATE ->
+  FIFO when not; VulkanSwapchainManager now queries the surface's supported
+  present modes instead of hardcoding MAILBOX.
+- Pre-init control calls are ignored with a warning (no native window yet).
+- Tests: present-mode selection, WindowSettings.VSync default/deserialisation,
+  and an editor render smoke test with a window controller. ADR and CONTEXT
+  entries record the decision.
+
+Co-authored-by: Pi <pi@earendil.works>
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
