@@ -1,0 +1,31 @@
+repository: serhii/IrrationalEngine
+commit: 2676a3a7affc037b2f2f1899f36bc036fa58fa3f
+date: 2026-10-07T11:24:40+03:00
+author: pi-agent <pi-agent@local>
+branches: ticket/26-animation-clip-names
+
+message:
+feat(editor): author gameplay components and spawn prefabs (#68)
+The inspector can now attach the new gameplay components (collider, light,
+health, weapon, character controller) without code, edit every parameter
+(health gained an editable model, light already had a drawer), and duplicate
+or save/spawn prefabs from the asset browser.
+
+- EditorComponentCatalog (composition root) + IEditorComponentCatalog contract:
+  the inspector's Add Component menu is data-driven, no UI change per component.
+- IEditorActions.AddComponent/RemoveComponent/DuplicateSelected/SavePrefab.
+- PrefabAsset + PrefabImporter (.prefab) so the asset browser lists and spawns
+  prefabs; spawning re-reads the file so a re-saved prefab is fresh.
+- ISceneSerializer.SerializeObject/DeserializeObject + ISceneObjectCloner and
+  gameplay component codecs (health, hit-flash, weapon, character controller)
+  so a prefab keeps authored values.
+- SceneObjectCloner adapter; DI wiring in the composition root.
+- Hierarchy 'Add Collider Box' shortcut for the five-collider demo.
+- Tests: gameplay round-trip, catalog, editor actions, prefab importer,
+  asset-browser prefab entries, prefab path config.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
