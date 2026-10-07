@@ -1,0 +1,29 @@
+repository: serhii/IrrationalEngine
+commit: 306e281949c706d5836735be1c8cb8c385d06b62
+date: 2026-10-07T11:08:44+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+feat(content): game host without editor — engine.json config, --game (#54)
+Add a runtime mode that plays a scene with no editor chrome, selected by
+engine.json or the command line, while the default editor run stays unchanged.
+
+- EngineConfig gains Render.Backend, Window.Width/Height/Fullscreen and Mode;
+  Mode defaults to Editor, so a config that omits it behaves exactly as before.
+- EngineLaunchOptions parses `--game [scene]`, `--editor` and `--scene <path>`
+  and overlays them on the file configuration; unknown arguments are reported.
+- Game mode registers no editor services, so WindowFactory falls back to its
+  optional IEditorUI default (null) and the ImGui overlay is never created.
+  The scene keeps its authored game camera instead of the editor orbit camera.
+- WindowSettings (IeCoreInterfaces.EngineWindow) carries the clamped size and
+  fullscreen flag into both Silk.NET backends via WindowFactory.
+- GameHostInputDriver composes GameInputDriver and arms the scene's follow
+  camera pointer lock every frame, since no EditorPlayMode exists in game mode.
+- ADR game-host-without-editor, CONTEXT glossary and AGENTS run instructions.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
