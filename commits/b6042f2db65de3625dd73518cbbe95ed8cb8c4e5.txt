@@ -1,0 +1,14 @@
+repository: serhii/IrrationalEngine
+commit: b6042f2db65de3625dd73518cbbe95ed8cb8c4e5
+date: 2026-10-07T06:09:05+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+Merge ticket 13: 13-60-third-person-pull-in
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
