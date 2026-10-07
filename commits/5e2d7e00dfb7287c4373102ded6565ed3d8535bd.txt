@@ -1,0 +1,38 @@
+repository: serhii/IrrationalEngine
+commit: 5e2d7e00dfb7287c4373102ded6565ed3d8535bd
+date: 2026-10-07T11:40:09+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+build(publish): per-RID publish profiles and a published-artifact smoke test (#67)
+Add self-contained linux-x64/win-x64 publish profiles (Release, no single-file or
+trimming, ContinuousIntegrationBuild) and scripts/smoke-publish.sh, which publishes
+with a profile, verifies the RID's native dependencies and the start-scene assets,
+runs the artifact in game mode for a bounded number of frames, and diffs two
+publishes to prove the output is reproducible.
+
+Making the published artifact actually start the demo scene required three fixes:
+
+- IeUtils copied an enumerated subset of Resources/, so Gltf/Duck.glb and the FBX
+  textures were missing and ResourceLocator's ancestor probing could not rescue a
+  build placed outside the checkout. The whole resource tree is copied now.
+- VulkanRenderer took a required IEditorUI purely to relay it to the ImGui
+  overlay, so game mode (no AddEditor) failed to resolve it in DI and `--game`
+  crashed before the window opened. The owning window now passes the UI to
+  CreateImGuiRenderer(IEditorUI), and the renderer holds no editor dependency.
+- WindowSettings.FrameLimit lets either window close itself after N rendered
+  frames, set from the new `--frames <n>` launch override; `--backend <Vulkan|
+  OpenGL>` overrides the configured backend so a headless runner can pick
+  software OpenGL under xvfb-run.
+
+Verified: dotnet test (1043 passed), dotnet format --verify-no-changes, and
+scripts/smoke-publish.sh for linux-x64 (Vulkan + headless OpenGL) and win-x64
+(cross-publish content check) — both publishes byte-identical.
+See docs/adr/build-publish-and-smoke.md.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
