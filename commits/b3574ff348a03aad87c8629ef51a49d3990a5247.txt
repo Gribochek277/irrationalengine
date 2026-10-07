@@ -1,0 +1,25 @@
+repository: serhii/IrrationalEngine
+commit: b3574ff348a03aad87c8629ef51a49d3990a5247
+date: 2026-10-07T07:31:44+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+feat(content): binary asset cache with mtime invalidation (#45)
+Cache parsed glTF/FBX entities beside their source as `<source>.iecache` so a
+second load skips parsing and texture decoding.
+
+- IAssetCache contract; BinaryAssetCache owns the file format (magic, schema
+  version, source stamp, payload CRC-32) and the stale/corrupt fallback.
+- CachedAssetImporter decorates the glTF/FBX importers in AddAssetImporters.
+- BinaryAssetWriter/Reader round-trip the entity graph, preserving shared
+  textures, skins and geometry by identity; node parents are rebuilt on read.
+- Freshness is a pure rule: schema version + source last-write time + length.
+- Tests: invalidation, corrupt/truncated cache fallback, serializer round trip,
+  decorator cache-hit, real-asset integration and a parse-vs-cache timing check.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
