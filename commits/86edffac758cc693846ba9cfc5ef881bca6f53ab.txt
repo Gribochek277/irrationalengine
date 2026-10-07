@@ -1,0 +1,14 @@
+repository: serhii/IrrationalEngine
+commit: 86edffac758cc693846ba9cfc5ef881bca6f53ab
+date: 2026-10-07T03:56:48+03:00
+author: serhii <serhii@localhost>
+branches: main
+
+message:
+Merge pull request 'feat(cameras): FPS and third-person game camera rigs (#51)' (#93) from feature/game-camera-rigs into main
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
