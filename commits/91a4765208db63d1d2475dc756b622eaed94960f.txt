@@ -1,0 +1,32 @@
+repository: serhii/IrrationalEngine
+commit: 91a4765208db63d1d2475dc756b622eaed94960f
+date: 2026-10-07T09:56:46+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+feat(combat): enemy dummy AI — patrol, line of sight and return fire (#66)
+A dummy target with a minimal brain: it walks a patrol route while it cannot
+see its target, notices the target by distance plus a line-of-sight ray through
+the scene physics queries, and returns fire with a hitscan while the target
+stays visible. Both sides of the demo can die.
+
+- EnemyDummyComponent: patrol movement, perception with range hysteresis,
+  return fire through IHitscanEffects and IDamageService, and a fire cooldown.
+- EnemySight / PatrolRoute: the pure perception and patrol rules.
+- EnemyDummyStateMachine: the declarative patrol / attack / death table,
+  driven through the shared IGameplayStateMachine; the dummy implements
+  IGameplayController so the damage service disables it on death.
+- EnemyDummyUpdater: a frame stage run after the weapon stage; dormant while
+  the scene's camera is not a game rig.
+- SceneObject wires the object's state machine into the dummy on load.
+- Demo: the target dummy patrols and shoots back at the knight.
+- Tests: perception, patrol, firing, LOS blocking, state transitions, stage
+  wiring and the demo end-to-end.
+- ADR docs/adr/enemy-dummy-ai.md and CONTEXT.md glossary entries.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
