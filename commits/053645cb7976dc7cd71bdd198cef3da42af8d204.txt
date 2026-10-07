@@ -1,0 +1,34 @@
+repository: serhii/IrrationalEngine
+commit: 053645cb7976dc7cd71bdd198cef3da42af8d204
+date: 2026-10-07T09:17:45+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+feat(editor): play mode — scene restart, gated input, hidden overlay, pointer lock (#58)
+The editor gains a play/stop switch. Entering restarts the scene from its
+authored state, arms the scene's game camera rig and requests pointer lock;
+leaving releases the lock, unloads the rig and reinstalls the editor orbit
+camera. EditorUI reads the state to hide the ImGui overlay (no draw-data
+submitted) and to report no capture, so GameInputDriver stops suppressing the
+polled input and the character controller plus the camera rig receive it. The
+toolbar Play (F5) button and the F5/Escape hotkeys drive it; the selection is
+remembered by name and restored on exit.
+
+- EditorPlayMode: play/editor switch, scene restart via ISceneManager, pointer
+  lock arming (re-armed each frame so a mid-play camera swap keeps the cursor)
+  and the editor camera restore.
+- IFollowCameraRig gains LockPointer so play mode arms the rig through the
+  contract, not the concrete rig.
+- EditorUI: capture flags read false while playing, Render skips the panels and
+  drops the draw-data, toolbar play button, selection restore.
+- Tests: EditorPlayModeTests (restart, arm/release, a fresh rig per entry, key
+  handling, camera-swap re-arm) and EditorUIPlayModeTests (overlay hidden, gate
+  open, selection restore, pointer lock).
+- ADR docs/adr/editor-play-mode.md and a CONTEXT.md glossary entry.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
