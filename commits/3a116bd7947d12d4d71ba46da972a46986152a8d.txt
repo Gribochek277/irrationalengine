@@ -1,0 +1,14 @@
+repository: serhii/IrrationalEngine
+commit: 3a116bd7947d12d4d71ba46da972a46986152a8d
+date: 2026-10-07T15:45:21+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/26-animation-clip-names
+
+message:
+Merge ticket 24: 24-24-editor-toolbar-save-load-shadowed
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
