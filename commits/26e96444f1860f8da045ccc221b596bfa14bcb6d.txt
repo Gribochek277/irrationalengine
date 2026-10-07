@@ -1,0 +1,14 @@
+repository: serhii/IrrationalEngine
+commit: 26e96444f1860f8da045ccc221b596bfa14bcb6d
+date: 2026-10-07T14:42:30+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/26-animation-clip-names
+
+message:
+Merge ticket 23: 23-68-inspector-gameplay-prefabs
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
