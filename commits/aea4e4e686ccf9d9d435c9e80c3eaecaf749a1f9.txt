@@ -1,0 +1,14 @@
+repository: serhii/IrrationalEngine
+commit: aea4e4e686ccf9d9d435c9e80c3eaecaf749a1f9
+date: 2026-10-07T12:50:58+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: tmp/ci-red-verify
+
+message:
+tmp: use Assert.Fail so the build passes and the test gate is what fails
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
