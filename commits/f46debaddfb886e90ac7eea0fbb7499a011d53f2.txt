@@ -1,0 +1,27 @@
+repository: serhii/IrrationalEngine
+commit: f46debaddfb886e90ac7eea0fbb7499a011d53f2
+date: 2026-10-07T05:52:47+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+feat(cameras): third-person pull-in raycast wall avoidance (#60)
+The third-person rig casts a ray from the pivot along the view axis and
+shortens the distance the camera sits at when geometry is between them.
+
+- CurrentDistance (effective) is split from Distance (the player's target),
+  so a pull-in can release back to the wheel's distance.
+- CameraRigMath.PullInDistance is the pure clamp(hit - radius, min, desired).
+- Pull-in is an immediate clamp (never clip); recovery waits
+  RecoveryDelayFrames clear frames then eases at RecoverySmoothing, so a
+  ray that flickers at a grazing angle cannot make the camera pump.
+- Optional IScenePhysicsQueries ctor dependency; null keeps the plain orbit
+  camera. Registered concretely in DI for the runtime camera mode (#59).
+- FakeScenePhysicsQueries + unit tests for the wall, grazing flicker,
+  near/far hit jumps, recovery and the pure distance rule.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
