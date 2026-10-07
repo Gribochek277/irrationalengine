@@ -1,0 +1,17 @@
+repository: serhii/IrrationalEngine
+commit: 0280a1331434fa33c2a240a507218dc81a8f48b7
+date: 2026-10-07T12:56:48+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+docs(ci): record the CI decision, ticket closure and the CI section in AGENTS.md
+Add docs/adr/ci-build-test-matrix.md refinements (runner registration, what was
+actually verified), mark the tracker issue done with the Windows-runner caveat,
+and document the check set in AGENTS.md so the next agent can reproduce a leg.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
