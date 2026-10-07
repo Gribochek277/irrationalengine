@@ -1,0 +1,54 @@
+repository: serhii/IrrationalEngine
+commit: d0840e4dab776c9703bd157f3d9d1bb715625e94
+date: 2026-10-07T06:20:59+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+feat(character): character controller — action map to capsule, locomotion and camera (#59)
+A character is now one component: CharacterControllerComponent reads the JSON
+action map (MoveX/MoveY/Run/Jump), resolves a camera-relative desired velocity,
+ramps the kinematic capsule toward it, drives the animation component's 1D
+locomotion blend with the distance actually travelled, applies a jump impulse
+derived from the jump height and the body's gravity, and turns the body toward
+the movement direction (third person) or the camera (FPS).
+
+- IeCoreInterfaces/Character: ICharacterControllerComponent,
+  ICharacterControllerUpdater, CharacterControllerFrame, IFollowCameraRig.
+- IeCore/DefaultImplementations/Character: the controller, its per-frame stage
+  and the pure CharacterControllerMath.
+- The controller owns its KinematicCapsuleBody and implements
+  IKinematicBodyComponent; PhysicsUpdater now finds bodies by contract, not by
+  component name.
+- FpsCameraRig and ThirdPersonCameraRig implement IFollowCameraRig (eye/pivot
+  follow); the editor's OrbitCamera does not, so the controller stays dormant
+  while the editor owns the scene. Follow sets the third-person Pivot, which is
+  exactly the origin the pull-in ray casts from.
+- The controller implements IGameplayController, so DamageService can disable it
+  on a lethal hit: movement stops, input is not consumed, the capsule is frozen
+  and the locomotion blend is released so a death clip can own the pose. Setting
+  IsEnabled back to true resumes movement and the blend.
+- SceneManager runs every stage in a fixed, documented order: gameplay state
+  machine -> hit-flash -> character controllers -> animation -> physics -> the
+  scene's camera tick. DI registers the character updater alongside the hit-flash
+  updater and the damage service.
+- SceneObject's transform is pure data again: it used to copy the object
+  transform into the model's first mesh, which the render pipeline also
+  composes — applying the transform twice for models with an identity baked
+  matrix. A moving character made that defect visible.
+- Demo scene keeps both hotkeys: H applies damage (health + hit-flash + death
+  disabling the controller) and C swaps the FPS/third-person game camera; the
+  knight is driven by the controller (capsule sized from its mesh AABB, mesh
+  aligned to its feet) on ground + crate colliders.
+
+Tests: pure math, component behaviour (velocity ramp, run/walk, jump edge,
+facing, follow anchor), the death flow through the real DamageService (disable,
+stop input, release blend, re-enable), the per-frame stage, a frame-level
+walk/jump integration with the physics stage, and an end-to-end demo-scene test
+that drives the real SceneManager stage order. ADR and CONTEXT glossary updated.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
