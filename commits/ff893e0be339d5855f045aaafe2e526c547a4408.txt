@@ -1,0 +1,14 @@
+repository: serhii/IrrationalEngine
+commit: ff893e0be339d5855f045aaafe2e526c547a4408
+date: 2026-10-07T11:50:55+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+Merge ticket 22: 22-67-publish-smoke
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
