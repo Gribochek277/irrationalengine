@@ -1,0 +1,14 @@
+repository: serhii/IrrationalEngine
+commit: 0194512f5c0f7cbd4a4fb0f99c736b2a45f2cd40
+date: 2026-10-07T13:01:32+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+docs(ci): point the workflow header at the pending windows-latest runner
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
