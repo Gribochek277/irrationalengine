@@ -1,0 +1,35 @@
+repository: serhii/IrrationalEngine
+commit: d10e296569b5072aaa63fc27cbd9a79c475697ab
+date: 2026-10-07T08:37:26+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+feat(combat): hitscan weapon — tracer, muzzle flash and cooldown (#61)
+A hitscan weapon shared by the player and the enemy AI: the Fire action
+casts a ray from the camera eye (FPS) or the muzzle bone socket (third
+person) through the scene physics queries, damages a hit target through
+the damage service and shows a frame-counted tracer and muzzle flash.
+Damage, range, cooldown and magazine/ammo are component fields.
+
+- WeaponAimResolver: pure origin selection (camera vs muzzle socket).
+- HitscanResolver: pure hit resolution that skips the shooter's own
+  collider, resuming a start-inside self hit past the collider diagonal.
+- HitscanWeaponComponent: firing state, damage and effect dispatch;
+  TryFire is the programmatic path for the enemy AI.
+- SceneHitscanEffects: pooled scene-object tracers/flashes using a
+  shared untextured unlit cube, so both backends draw them through the
+  ordinary Collect -> Draw path.
+- WeaponUpdater runs last in SceneManager, after the physics stage and
+  the scene's camera tick.
+- SceneObject wires the animation component's bone socket into a weapon.
+- Demo: the knight carries a weapon and a target dummy stands ahead.
+- Tests: origin selection, hit resolution, self-skip, cooldown, ammo,
+  tracer/flash placement, socket wiring, weapon stage and demo firing.
+- ADR docs/adr/hitscan-weapon.md and CONTEXT.md glossary entries.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
