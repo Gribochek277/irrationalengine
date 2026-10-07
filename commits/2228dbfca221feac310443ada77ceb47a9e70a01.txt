@@ -1,0 +1,14 @@
+repository: serhii/IrrationalEngine
+commit: 2228dbfca221feac310443ada77ceb47a9e70a01
+date: 2026-10-07T08:33:26+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+status: ticket 10 done
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
