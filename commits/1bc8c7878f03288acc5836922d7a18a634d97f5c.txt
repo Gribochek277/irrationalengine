@@ -1,0 +1,20 @@
+repository: serhii/IrrationalEngine
+commit: 1bc8c7878f03288acc5836922d7a18a634d97f5c
+date: 2026-10-07T12:38:12+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+build(ci): ubuntu + windows build/test matrix (#47)
+Add a Gitea Actions workflow that builds the whole solution with warnings
+promoted to errors and runs every test project on ubuntu-latest and
+windows-latest. One job definition drives both legs, fail-fast is off so both
+OSes always report, and any failed leg fails the run.
+
+Record the decisions in docs/adr/ci-build-test-matrix.md.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
