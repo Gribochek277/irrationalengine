@@ -1,0 +1,33 @@
+repository: serhii/IrrationalEngine
+commit: 41c50bd12c6b80b7adb41229a73479ef5ed88a4d
+date: 2026-10-07T15:39:29+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/26-animation-clip-names
+
+message:
+fix(editor): put toolbar menus in a menu bar and handle overflow (#24)
+The Debug and Window menus were bare BeginMenu calls between the toolbar's
+ordinary widgets. Outside a menu bar a BeginMenu behaves as a menu button:
+once open, its popup is re-anchored over the neighbouring widgets and blocks
+their hover/click, so the Debug popup shadowed the scene path field, Save
+Scene and Load Scene. The single SameLine row also could not fit a narrow
+window (ImGui does not wrap), pushing later controls off-screen.
+
+- Toolbar gains ImGuiWindowFlags.MenuBar and draws Debug/Window inside
+  BeginMenuBar/EndMenuBar, so a menu popup can never cover the scene controls
+  and only other menu-bar items react to hover while a menu is open.
+- Controls move to one row below the menu bar (modes, scene path, Save/Load,
+  Play); the path field flexes between 80 and 180 px.
+- The toolbar reserves a horizontal scrollbar row and exposes
+  ImGuiWindowFlags.HorizontalScrollbar when the controls row cannot fit, so
+  every control stays reachable at any width.
+- EditorUI records a per-frame ToolbarLayoutSnapshot (internal) so the new
+  EditorToolbarTests can assert menu-bar geometry, hover/click state and the
+  overflow flag. The tests fail against the old layout.
+- docs/adr/editor-toolbar-menu-bar-and-overflow.md records the structure.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
