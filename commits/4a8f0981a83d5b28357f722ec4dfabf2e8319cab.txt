@@ -1,0 +1,14 @@
+repository: serhii/IrrationalEngine
+commit: 4a8f0981a83d5b28357f722ec4dfabf2e8319cab
+date: 2026-10-07T14:43:57+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/26-animation-clip-names
+
+message:
+status: ticket 23 done
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
