@@ -1,0 +1,14 @@
+repository: serhii/IrrationalEngine
+commit: a7f0989cd36e44797e350a96ba02f3c738cf7d6e
+date: 2026-10-07T09:15:49+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/12-47-ci-matrix
+
+message:
+Merge ticket 20: 20-61-hitscan-weapon
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
