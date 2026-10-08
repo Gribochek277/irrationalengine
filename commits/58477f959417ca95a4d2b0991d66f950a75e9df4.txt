@@ -1,0 +1,40 @@
+repository: serhii/IrrationalEngine
+commit: 58477f959417ca95a4d2b0991d66f950a75e9df4
+date: 2026-10-08T09:49:24+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+refactor(components): audit placement, single responsibility and duplication (#28)
+Audit of the component layer written by tickets 08, 13, 14, 16-21 and 23,
+with the mechanical findings fixed:
+
+- Move IHealthComponent, IHitFlashComponent and IWeaponComponent to
+  IeCoreInterfaces/Combat, and IStateMachineComponent to
+  IeCoreInterfaces/Gameplay, so every component contract mirrors the domain
+  folder that owns its implementation (Combat / Gameplay). Character, enemy
+  and audio component contracts already mirrored theirs.
+- Add a ComponentName constant to every component contract and replace the
+  duplicated key literals in the components, the frame stages, SceneObject's
+  load wiring, the serializer and its codecs, both renderers, the render
+  pipeline, the editor catalog/drawers and the debug overlays.
+- Extract IeUtils.AngleMath (Wrap/Step); CameraRigMath.WrapYaw and
+  CharacterControllerMath.WrapAngle/StepAngle delegate to it, so the
+  [-pi, pi) convention has one implementation.
+- Extract SceneCameraLookup.FindFollowRig, shared by the character, weapon
+  and enemy stages instead of three private copies.
+- Drop four stale "TODO: Add caching" comments on ModelComponent accessors
+  that already cache.
+
+docs/adr/component-architecture-audit.md records the component and stage
+tables, the verdicts and the deliberate follow-ups (camera-basis extraction,
+ICamera/ISceneMutable placement, collider/cull composition, multi-type files
+outside the component layer).
+
+Build and the full suite (1189 tests) stay green.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
