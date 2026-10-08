@@ -1,0 +1,14 @@
+repository: serhii/IrrationalEngine
+commit: 912f113a282b2410ea27ec8a8a717f21a25a22fa
+date: 2026-10-08T08:09:28+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Merge ticket 26: 26-animation-clip-names
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
