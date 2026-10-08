@@ -1,0 +1,29 @@
+repository: serhii/IrrationalEngine
+commit: 08f2edfb0d111c8efd4c4d9fac6726f7fc209c2c
+date: 2026-10-08T08:23:44+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+feat(character): editable capsule volume and an upright FBX bind pose (#25)
+Expose the kinematic capsule's Radius/Height as mutable, clamped properties on
+KinematicCapsuleBody and pass them through on CharacterControllerComponent and
+KinematicBodyComponent, so the reflection inspector can resize the character's
+physical volume live (height stays >= 2*radius, feet stay put).
+
+Fix the FBX importer's skeleton mapping: keep the non-bone armature ancestors
+(a Blender Armature node) as weightless bones and set GlobalInverseTransform to
+the inverse of the mesh node's world transform. Without that the bind pose
+dropped the armature rotation and the skinned knight was drawn lying down. The
+demo now imports Resources/FBX/knight.fbx instead of the stale Json/knight.json,
+and the binary asset cache schema is bumped because the importer mapping changed.
+
+Tests: capsule resize updates the live volume and the next step uses it; the
+demo knight is upright (skinned bounds) and grounded after settling; walking
+into the demo crate is blocked.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
