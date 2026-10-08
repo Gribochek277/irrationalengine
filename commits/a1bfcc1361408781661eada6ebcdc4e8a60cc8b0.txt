@@ -1,0 +1,29 @@
+repository: serhii/IrrationalEngine
+commit: a1bfcc1361408781661eada6ebcdc4e8a60cc8b0
+date: 2026-10-08T16:39:30+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+feat(editor): draw kinematic capsule bodies in the collider debug view (#32)
+The "Show colliders" overlay drew only IColliderComponent world boxes, so a
+character's KinematicCapsuleBody was invisible and its configured size could
+not be read without opening the inspector.
+
+- ColliderVolumeMath.Resolve is the single pure seam that returns a
+  ColliderVolume (box and/or capsule); the capsule is resolved through the
+  IKinematicBodyComponent contract, never a concrete type or component name.
+- CapsuleWireframeMath.Edges returns the centre rings, vertical silhouette
+  edges and hemisphere arcs of a capsule in the same (Start, End) form as
+  ColliderBoxMath.Edges; a zero-core capsule degrades to a sphere without
+  duplicate or zero-length segments.
+- ColliderOverlay draws boxes and capsules for every object (selected or
+  not) and labels the selected capsule with its radius and height.
+- Picking stays box-only; SceneViewMathTests covers the new geometry, the
+  volume seam and the size label.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
