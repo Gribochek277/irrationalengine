@@ -1,0 +1,20 @@
+repository: serhii/IrrationalEngine
+commit: 6222415eae3dbc00e7b482035520eb8d8c821101
+date: 2026-10-09T01:03:57+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+build: keep NuGet audit advisories from breaking a fresh restore
+SixLabors.ImageSharp 3.1.12 is the newest 3.x release and the advisory fixes
+exist only in a later major, so a fresh worktree or CI restore failed on
+NU1902/NU1903 promoted to errors by TreatWarningsAsErrors. Suppress the
+advisory-as-error on the two projects that reference the package, matching the
+existing AutoMapper suppression, so a vulnerability-database update cannot
+break the build.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
