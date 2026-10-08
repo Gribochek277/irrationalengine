@@ -1,0 +1,19 @@
+repository: serhii/IrrationalEngine
+commit: d469bf591a37573d03481cf3ad4991858fc14874
+date: 2026-10-09T02:19:30+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+docs(scripting): record the foundation ADR, project structure and glossary
+Add docs/adr/csharp-scripting-foundation.md (IeCoreScripting split, runtime
+Roslyn compilation, the filtered reference set, the collectible load
+context and the ScriptConfig placement), list IeCoreScripting and its tests
+in AGENTS.md with the Roslyn dependency row, and add the Scripting Layer
+and Engine Script glossary entries to CONTEXT.md.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
