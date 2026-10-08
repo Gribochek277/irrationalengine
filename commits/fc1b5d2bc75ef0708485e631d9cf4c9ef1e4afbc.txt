@@ -1,0 +1,19 @@
+repository: serhii/IrrationalEngine
+commit: fc1b5d2bc75ef0708485e631d9cf4c9ef1e4afbc
+date: 2026-10-09T02:19:30+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+style(tests): dispose script fixtures explicitly and drop unused usings
+Replace every using declaration in the scripting tests with an explicit
+local plus try/finally disposal, per the repo convention. Also remove four
+unused IeCoreInterfaces.SceneObjectComponents usings in IeCore.Tests that
+the full dotnet format --verify-no-changes run flags (they predate this
+branch on main).
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
