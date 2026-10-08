@@ -1,0 +1,16 @@
+repository: serhii/IrrationalEngine
+commit: a0f82d9ca5735af2a48119c758c4345067c312ac
+date: 2026-10-08T09:05:41+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Revert "Merge ticket 27: 27-inspector-component-coverage"
+This reverts commit 5c4e722f992bedfa67548129af8df400d99bd87f, reversing
+changes made to 69d5a3f44041f758a4ca370705f6ff305d837717.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
