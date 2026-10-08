@@ -1,0 +1,14 @@
+repository: serhii/IrrationalEngine
+commit: d60e8f7f0c66804a41dd48a53496d61617e53efd
+date: 2026-10-08T09:53:28+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Merge ticket 28: 28-component-architecture-audit
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
