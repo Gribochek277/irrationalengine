@@ -1,0 +1,14 @@
+repository: serhii/IrrationalEngine
+commit: c2a9e798720cd3e1e9705793b5853bdc1dc0065a
+date: 2026-10-08T13:00:36+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+ticket 31: register runtime scene objects ticket and add it to the index
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
