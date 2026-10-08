@@ -1,0 +1,20 @@
+repository: serhii/IrrationalEngine
+commit: e0e40f294edb36dd9584ed62789c40518e286388
+date: 2026-10-09T02:33:56+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+docs(scripting): state the foundation as it is today, not as it will run
+The Scripting Layer glossary entry claimed the provider compiles at
+start-up and that scripts already run every tick. Nothing resolves the
+provider yet and the component and stage implementations arrive in the
+follow-up slices, so the entry now says the provider compiles on first
+access and describes the component and the stage as the next slices.
+The Engine Script entry now names the discovery filter exactly.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
