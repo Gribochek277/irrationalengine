@@ -1,0 +1,21 @@
+repository: serhii/IrrationalEngine
+commit: c2585be7f8e242be473f8a729d69aaf4c23159f8
+date: 2026-10-09T01:57:53+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+fix(scripting): keep engine assemblies out of the script reference set
+A self-contained publish puts the whole app directory into the trusted
+platform assembly list, so the compiler was handing scripts IeCore.dll,
+IeCoreEditor.dll and every backend as metadata references. Filter the
+platform list by engine assembly name (IeCore*, IeUtils) before adding the
+three host assemblies, and expose the produced reference paths so tests
+assert the layering guarantee against the set itself instead of the test
+process closure.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
