@@ -1,0 +1,23 @@
+repository: serhii/IrrationalEngine
+commit: 300110f7d0847d305332cee8a8b023b7f5fa7598
+date: 2026-10-09T01:24:29+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+feat(scripting): compile the player's Scripts folder with Roslyn
+Add the scripting foundation: contracts in IeCoreInterfaces.Scripting, the
+IeCoreScripting project (Roslyn compiler, collectible load context, source
+locator and the lazy assembly provider), the EngineBehaviour base class, the
+script folder configuration and the shipped Spin example.
+
+Scripts compile at runtime from a project-level Scripts folder; base types
+resolve from the default load context while the user assembly loads into a
+collectible context. A missing folder or a failed compile leaves the engine
+running with empty script types and diagnostics in LastErrors.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
