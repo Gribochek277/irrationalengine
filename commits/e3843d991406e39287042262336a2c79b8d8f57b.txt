@@ -1,0 +1,27 @@
+repository: serhii/IrrationalEngine
+commit: e3843d991406e39287042262336a2c79b8d8f57b
+date: 2026-10-08T08:01:36+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: ticket/26-animation-clip-names
+
+message:
+fix(content): keep imported animation clip names through JSON deserialization (#94)
+Asset.Name has a private setter, so Json.NET dropped the name stored in a
+JSON model and every Animation kept the GUID its parameterless constructor
+generated. Name-keyed lookups (state machine, IAnimationComponent.TryPlay and
+CrossFadeTo) then silently missed.
+
+ModelImporter now deserializes through a contract resolver that exposes
+non-public setters and drops the computed Asset.SubAssets view, which mirrors
+the owning collections and cannot be read back. The entity model stays free of
+Json.NET attributes.
+
+Tests: a model JSON round trip preserves a clip name, the knight sample keeps
+the names stored in the file, an imported clip resolves through TryPlay, and
+the glTF path's animation name is pinned.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
