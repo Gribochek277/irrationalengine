@@ -1,0 +1,27 @@
+repository: serhii/IrrationalEngine
+commit: a807142edc21881a01344782e20e4e9bd69801a2
+date: 2026-10-08T08:57:50+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+feat(editor): complete inspector component coverage (#95)
+Audit every ISceneObjectComponent and close the gaps so the editor really
+exposes the gameplay surface:
+
+- mark the load-time wiring dependencies [HideInInspector] on the contracts
+  (model, material, animation, bone socket, state machine)
+- expand AnimationComponent.Locomotion in the reflection drawer, like the
+  character controller's copy
+- add audio emitter/listener, enemy dummy, state machine and hit flash to
+  the Add Component catalog
+- attach a positional audio emitter to the demo player
+- add an inspector coverage regression test that discovers every concrete
+  component type and fails until it renders
+- commit the audit table in docs/adr/inspector-component-coverage.md
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
