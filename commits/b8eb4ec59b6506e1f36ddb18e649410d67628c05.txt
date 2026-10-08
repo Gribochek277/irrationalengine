@@ -1,0 +1,30 @@
+repository: serhii/IrrationalEngine
+commit: b8eb4ec59b6506e1f36ddb18e649410d67628c05
+date: 2026-10-08T12:35:48+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+feat(scene): register gameplay-spawned objects through a runtime seam (#31)
+Hitscan tracers and muzzle flashes were ordinary scene objects, so they
+appeared in the editor hierarchy, were written by a Save and outlived a
+play-mode restart because the effects singleton kept its pool pointing at
+objects the reload had discarded.
+
+Add IRuntimeSceneObjects in IeCoreInterfaces.Scene: DefaultScene tracks
+objects registered through it, excludes them from authored views, and
+releases them — bumping a generation — on unload and scene load. The scene
+serializer and the editor hierarchy skip runtime objects. SceneHitscanEffects
+registers its capped pool through the seam and rebuilds it when the scene or
+its generation changes, so a session that starts after the pool filled still
+draws. The seam lives in the scene domain, so gameplay no longer names the
+editor's ISceneMutable and runs in game-host mode.
+
+Record every scene-object creation site and its verdict in
+docs/adr/runtime-scene-objects.md.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
