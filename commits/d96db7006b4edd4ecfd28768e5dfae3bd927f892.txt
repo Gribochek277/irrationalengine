@@ -1,0 +1,34 @@
+repository: serhii/IrrationalEngine
+commit: d96db7006b4edd4ecfd28768e5dfae3bd927f892
+date: 2026-10-09T04:36:23+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+feat(editor): attach and edit scripts from the inspector (#35)
+Close the authoring loop: a compiled script is offered in the Add Component
+menu, its public fields are editable next to its properties, and the Project
+panel lists the Scripts folder's sources as openable Script assets.
+
+- ReflectionPropertyDrawer: GetVisibleFields/DrawField plus one
+  InspectorMember-based dispatch shared by the property and field paths
+  (ResolveValueKind decides the widget, PropertyErrorStore keeps the error
+  line); InspectorExpandAttribute sub-trees recurse over both member kinds.
+- ImGuiPropertyDrawer: an IScriptComponent section draws the hosted script
+  instance's members and shows a warning when the type left the assembly.
+- EditorComponentCatalog: Available appends script:<FullName> entries read
+  live from IScriptAssemblyProvider.ScriptTypes; Create builds the
+  ScriptComponent from the descriptor, provider and context factory;
+  CanRemove/GetId round-trip the component's simple name.
+- AssetBrowserService: appends one non-importable Script entry per source
+  file (never RegisterFile) and invalidates its cache on ScriptsChanged.
+- ExternalFileOpener.OpenFile + a pure platform-command seam; the Project
+  panel double-click opens a Script, its menu offers "Open Script", and
+  Script rows get their own icon colour.
+- HideInInspector/InspectorExpand now also accept fields.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
