@@ -1,0 +1,14 @@
+repository: serhii/IrrationalEngine
+commit: 35f620d5d37b0650939aa7ea59fb8898afa23d79
+date: 2026-10-09T06:58:37+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+test(serialization): implement the hot-reload provider members in the scripting fake (#37)
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
