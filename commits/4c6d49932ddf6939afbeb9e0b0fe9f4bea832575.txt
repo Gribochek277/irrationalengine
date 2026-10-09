@@ -1,0 +1,40 @@
+repository: serhii/IrrationalEngine
+commit: 4c6d49932ddf6939afbeb9e0b0fe9f4bea832575
+date: 2026-10-09T03:21:39+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+feat(scripting): run script components in the scene lifecycle (#34)
+Make scripts actually run. A scene object can now carry a ScriptComponent,
+the script receives the narrow engine context, and the SceneManager ticks
+every script once per frame between the physics stage and the camera tick,
+in editor and game mode alike.
+
+- ScriptFieldCodec: the pure by-name snapshot/restore seam hot reload and
+  the serializer share (public instance fields, ordinal order, missing and
+  mismatched names skipped).
+- ScriptComponent: binds once through the provider and context factory,
+  awakes on success, disables on unload, migrates fields by name when a
+  reload changes the runtime type under the same full name.
+- ScriptUpdater: binds, starts (once per instance) and updates every
+  script; a throwing script is reported once per (object, script) pair and
+  cannot abort the stage.
+- EngineScriptContext/Factory: GameObject, GetComponent<T>, Scene,
+  ActionMap, AssetManager and a Log that names the script and the object.
+- Contracts: IEngineScript gains Awake/OnDisable (the full driven
+  lifecycle), IScriptComponent gains SnapshotFields/RestoreFields (the
+  serializer seam), and the context factory takes the descriptor so a log
+  line can name the script type.
+- SceneManager runs the stage after physics and before Scene.OnUpdated();
+  both construction sites and both DI modes register it.
+
+Covered by field-codec, component, updater, context, stage-order and
+composition tests plus an end-to-end test that compiles the committed Spin
+script and rotates a cube through the real stage.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
