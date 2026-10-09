@@ -1,0 +1,27 @@
+repository: serhii/IrrationalEngine
+commit: d3efe1a12fbbafef6731663d2fc3fef2f2a22dc8
+date: 2026-10-09T03:39:45+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+fix(scripting): convert Spin's speed to radians and state the shipped layer (#34)
+Review round 1 findings:
+
+- Spin documents Speed as degrees per second but added Speed * dt straight
+  to Rotation.Y, spinning ~57.3x too fast. OnUpdate now multiplies by
+  pi/180, and the end-to-end assertions expect pi/4 after the first 0.5 s
+  frame and pi/4 + 5 deg after the Speed = 10 frame. Degrees-per-second
+  semantics stay documented on the field.
+- CONTEXT.md's Scripting Layer entry still called the component and stage
+  "the next slices": it now names ScriptComponent, ScriptUpdater and
+  ScriptFieldCodec as shipped parts of the layer and states that scripts
+  tick wherever the scene ticks, editor mode included. The Engine Script
+  entry lists OnDisable in the override lifecycle and says when Awake and
+  OnDisable run.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
