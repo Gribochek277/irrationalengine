@@ -1,0 +1,20 @@
+repository: serhii/IrrationalEngine
+commit: 6b008c0e056ffb52ef2e239163f32bcb0a991843
+date: 2026-10-09T06:57:48+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+chore(test-support): implement the hot-reload members in the shared stub
+Rebasing ticket 35 onto ticket 36's main left the shared
+StubScriptAssemblyProvider behind the IScriptAssemblyProvider contract:
+RequestRecompileAsync and TryApplyPendingSwap were added by the hot-reload
+work. The stub keeps them inert (no recompile requested, never a pending
+assembly), so the editor catalog and asset-browser tests exercise the same
+behaviour as before while satisfying the interface.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
