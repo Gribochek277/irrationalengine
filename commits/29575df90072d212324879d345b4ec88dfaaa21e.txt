@@ -1,0 +1,14 @@
+repository: serhii/IrrationalEngine
+commit: 29575df90072d212324879d345b4ec88dfaaa21e
+date: 2026-10-09T03:59:31+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+status: start ticket 35
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
