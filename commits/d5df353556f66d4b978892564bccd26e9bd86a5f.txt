@@ -1,0 +1,33 @@
+repository: serhii/IrrationalEngine
+commit: d5df353556f66d4b978892564bccd26e9bd86a5f
+date: 2026-10-09T04:41:13+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+feat(serialization): script components survive save, load and duplicate (#37)
+Script components are authored content: the scene serializer captures each
+script component's type full name and public field values, and restores them
+by resolving the type through IScriptAssemblyProvider and deferring the field
+values until the script stage binds the component.
+
+- ISceneComponentCodec gains CanCapture/Matches fallbacks so a component whose
+  key is an arbitrary script class name is claimed outside the name map.
+- ScriptComponentCodec + ScriptFieldValueMapper cover bool, the numeric
+  primitives, string, enums by name, Vector2/3/4 and Texture/AudioClip by
+  asset name; unknown types, unsupported fields and missing assets warn and
+  keep the scene loading.
+- ScriptComponent keeps values restored before Bind and applies them before
+  Awake, so a load-save cycle and the first frame preserve authored values.
+- The script context factory resolves lazily: the scene owns the serializer,
+  which now owns the script codec, so an eager factory closes a DI cycle.
+
+Tests: round trip with verbatim field keys, unknown type warn-once, unsupported
+field named warning, missing asset, no-scripting serializer, SceneObjectCloner
+duplicate, deferred-factory composition guard, pre-bind restore semantics.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
