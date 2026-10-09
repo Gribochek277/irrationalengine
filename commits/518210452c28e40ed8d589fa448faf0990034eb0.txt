@@ -1,0 +1,25 @@
+repository: serhii/IrrationalEngine
+commit: 518210452c28e40ed8d589fa448faf0990034eb0
+date: 2026-10-09T07:35:19+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+fix(serialization): restore nullable script fields end to end (#37)
+- ScriptFieldValueMapper accepts a null token for a nullable value type and
+  no longer reports a nullable field as 'not nullable'; the reason names the
+  underlying type for a genuinely non-nullable field.
+- ScriptFieldCodec.CanAssign states the nullable rule explicitly: a nullable
+  field accepts its underlying type, because boxing erases the wrapper.
+- ScriptProbeBehaviour gains float?/int? fields: a serializer round trip
+  carries a value and a null with no warning, and a stored null for a
+  non-nullable float still warns by field name and keeps the script default.
+- CodecFixture gains nullable fields with a snapshot/restore test.
+- Drop the ticket-37 FakeScriptAssemblyProvider in favour of the shared
+  IeCore.TestSupport StubScriptAssemblyProvider added with ticket 35.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
