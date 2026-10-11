@@ -1,0 +1,36 @@
+repository: serhii/IrrationalEngine
+commit: 51d3307649e24d49406193aea71987f7906e74ec
+date: 2026-10-11T18:13:09+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+fix(serialization): bake the editor camera's view into a saved scene's camera (#39)
+EditorUI.Init replaces the authored rig with the editor's OrbitCamera on the
+scene's camera object, and CameraComponentCodec.Capture had no branch for it:
+every editor save wrote a bare { "kind": "Fps" }, so a scene loaded with
+--game sat at the world origin (inside the demo ground) and rendered nothing.
+
+Decompose the camera's view instead. CameraRigMath.DecomposeView(view) is the
+inverse of View(eye, forward): it recovers the eye from the rotation/
+translation pair, takes the look direction as the negated third column of the
+rotation part, and derives pitch = asin(forward.Y) and yaw = atan2(-forward.X,
+-forward.Z), passing both through ClampPitch/WrapYaw so the pose is always
+expressible by a yaw/pitch rig. Roll is dropped by design and a degenerate or
+non-finite matrix yields the zero pose rather than NaN.
+
+The capture fallback then consumes only ICamera.GetViewMatrix() -- no editor
+type, which the dependency direction forbids anyway -- and writes the
+decomposed position/yaw/pitch with the FPS defaults the restore side assumes.
+
+Tests cover the inverse (including a wrapped yaw, a pitch at the clamp and a
+non-identity eye), a rolled view, degenerate matrices, a stub ICamera round
+trip and the editor's OrbitCamera round trip. The chosen semantics are
+recorded in the camera glossary and the game-camera-rigs ADR: preserving the
+suspended authored rig across a save is a deliberate follow-up.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
