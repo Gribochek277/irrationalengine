@@ -1,0 +1,44 @@
+repository: serhii/IrrationalEngine
+commit: 16f3067f3633b232802c5833d06215129a6c4628
+date: 2026-10-11T19:09:45+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+fix(scene): register the engine's built-in assets before a scene loads (#40)
+A scene saved from the editor rendered an empty frame in --game: every
+primitive-based object lost its model and material on load. The built-ins
+existed only in code that ran when the demo scene was built —
+PrimitivesFactory.CreateCube/CreateRectangle/CreateTriangle registered
+Cube/defaultCubeFile, CubeDiffuse/cubeFile, ... lazily, and BuildDemoScene
+registered the in-memory checkerboard. A start-up scene loaded through
+DefaultScene.TryLoadConfiguredScene ran neither, so the serializer's name
+lookup missed, the synthetic file strings had no file to import, and the
+codecs dropped the components with a missing-asset warning.
+
+BuiltInAssets (IeCore/AssetManagers) is now the one owner: a single
+idempotent Register(IAssetManager, IPrimitivesFactory) registers the
+checkerboard first (the primitive materials diffuse it) and then the
+primitives through IPrimitivesFactory.EnsureRegistered(). DefaultScene.OnLoad
+calls it before it loads anything, so the demo builder and a saved scene see
+the same instances; the demo no longer registers the checkerboard itself. The
+factory's Create* methods are retrieve-or-create, so they keep returning the
+registered instances, and the model-instance factory's checkerboard fallback
+goes through the same owner instead of its own copy of the name and recipe.
+DefaultTexture owns the built-in checkerboard's recipe and name, so no name
+or resolution is retyped; SceneAssetResolver and the codecs are untouched.
+
+Tests: a primitive scene object saved with the factory reopens in a fresh
+asset manager with its model, material and checkerboard texture and no
+missing-asset warning; a configured start-up scene file that references the
+built-ins loads through DefaultScene with model and material present; the
+registration is idempotent and runs before the primitives are registered.
+All four fail with the pre-fix behaviour (verified by disabling the
+registration), which also reproduced the ticket's exact warnings in a
+headless --game run.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
